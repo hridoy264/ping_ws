@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+from pingpong_launcher_sim.controller import main
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,32 @@
+Starting headless Gazebo; logs: /tmp/pingpong-smoke-ih8y1d6e/simulation.log
+PASS six articulated joints, ROS clock, and fire service are available
+PASS simulation time advances
+PASS high-level command subscribers are connected
+PASS all wheels are stopped
+PASS fire service responded
+PASS fire with stopped wheels was rejected: Set all three wheels above 48 RPM and wait for them to spin up.
+PASS measured aim reaches +10 deg yaw and +10 deg elevation
+PASS all three measured wheel velocities match their individual RPM commands
+PASS fire service responded
+PASS Gazebo confirms one launched ball (not merely a queued fire request)
+PASS feeder physically advances one 90 deg pocket
+PASS spawned ball has a world pose
+PASS launched ball keeps moving forward by at least 10 cm
+PASS fire service responded
+PASS repeated shot 2 is confirmed
+PASS feeder index 2 reaches its measured target
+PASS fire service responded
+PASS repeated shot 3 is confirmed
+PASS feeder index 3 reaches its measured target
+PASS fire service responded
+PASS repeated shot 4 is confirmed
+PASS feeder index 4 reaches its measured target
+PASS fire service responded
+PASS repeated shot 5 is confirmed
+PASS feeder index 5 reaches its measured target
+PASS fire service responded
+PASS stop service responded
+PASS stop service stops all measured wheel velocities
+PASS cancelled shot observation period elapsed
+PASS stop cancels a pending feeder/launch sequence
+PASS ROS 2 Humble / Gazebo Fortress runtime smoke test

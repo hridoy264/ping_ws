@@ -1,0 +1,1550 @@
+[
+  {
+    "source": "fusion/AimingR4/STL/A02_Head_guide_and_50mm_hose_spigot.stl",
+    "source_sha256": "d612b81ebac73b179ad7dd14825c15432c74f9db3109f095f31f560ab5c548b7",
+    "output": "meshes/A02_Head_guide_and_50mm_hose_spigot.stl",
+    "triangles": 2244,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.072,
+        -0.034,
+        -0.033981014251708984
+      ],
+      [
+        0.0,
+        0.034,
+        0.033981014251708984
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A03_Fixed_feeder_50mm_hose_spigot.stl",
+    "source_sha256": "cb1c70b08afe0829a03d04f4edf5531ac4bf25b5220dfa1882e5714debc6fd18",
+    "output": "meshes/A03_Fixed_feeder_50mm_hose_spigot.stl",
+    "triangles": 2048,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.256,
+        -0.03099625015258789,
+        0.304
+      ],
+      [
+        -0.19401499938964845,
+        0.03099625015258789,
+        0.344
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A04_Head_clamp_half_1.stl",
+    "source_sha256": "875dbfb59bbefdbc4c64b0d7ca8f8419a13761eeced1c255f6a9f8e81287a3e8",
+    "output": "meshes/A04_Head_clamp_half_1.stl",
+    "triangles": 1604,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.23
+    ],
+    "bounds_metres": [
+      [
+        -0.015,
+        -0.1265,
+        0.0010000000000000009
+      ],
+      [
+        0.015000000000000003,
+        0.1265,
+        0.11649999999999996
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A04_Head_clamp_half_2.stl",
+    "source_sha256": "db89439b906087f85ab0c17e1a2d58f6dc7e980f79073365523560aece94d51d",
+    "output": "meshes/A04_Head_clamp_half_2.stl",
+    "triangles": 1604,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.23
+    ],
+    "bounds_metres": [
+      [
+        -0.015,
+        -0.1265,
+        -0.1165
+      ],
+      [
+        0.015000000000000003,
+        0.1265,
+        -0.0010000000000000009
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A05_Yaw_base_and_bearing_tower.stl",
+    "source_sha256": "231a05bf805939abc7457e6a0c58162fe56f2f7619214c82ecf0a915151f34b9",
+    "output": "meshes/A05_Yaw_base_and_bearing_tower.stl",
+    "triangles": 3544,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.153,
+        -0.12,
+        0.0
+      ],
+      [
+        0.087,
+        0.12,
+        0.055
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A06_NEMA17_yaw_motor_bridge.stl",
+    "source_sha256": "ff725c9fe3996fcc5e9b9afa786421266a3b7307510ae9f00f6b6f26e60c92c8",
+    "output": "meshes/A06_NEMA17_yaw_motor_bridge.stl",
+    "triangles": 1464,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        0.022,
+        -0.025,
+        0.0505
+      ],
+      [
+        0.087,
+        0.025,
+        0.0565
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A07_Yaw_turntable_72T_module2.stl",
+    "source_sha256": "a7f41bda7ea252fc8d0db352486a32bb404ab44dd1a352f8c749a120d370153c",
+    "output": "meshes/A07_Yaw_turntable_72T_module2.stl",
+    "triangles": 6882,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.084
+    ],
+    "bounds_metres": [
+      [
+        -0.118,
+        -0.1179867935180664,
+        -0.026000000000000002
+      ],
+      [
+        0.11794718933105469,
+        0.1179867935180664,
+        0.00399999999999999
+      ]
+    ],
+    "link": "yaw_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A08_NEMA_yaw_pinion_18T_module2.stl",
+    "source_sha256": "a267d30b6b760e97cd341f8269fd40353c985b04db4f18438afa1001ffbdd722",
+    "output": "meshes/A08_NEMA_yaw_pinion_18T_module2.stl",
+    "triangles": 1904,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        0.03720479202270508,
+        -0.019990200042724608,
+        0.06
+      ],
+      [
+        0.07679521179199218,
+        0.019990200042724608,
+        0.075
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A09_Pitch_fork_arm_-1.stl",
+    "source_sha256": "7daf8fa48f80bcad695513180a0de7f9813d4d255736865da2ea7037ccbd65c5",
+    "output": "meshes/A09_Pitch_fork_arm_-1.stl",
+    "triangles": 1228,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.084
+    ],
+    "bounds_metres": [
+      [
+        -0.034,
+        -0.142,
+        0.00399999999999999
+      ],
+      [
+        0.034,
+        -0.091,
+        0.15999999999999998
+      ]
+    ],
+    "link": "yaw_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A09_Pitch_fork_arm_1.stl",
+    "source_sha256": "d9ba47601658052a111deec78a67b9ca2aed7ba5aa6446fc88c3b0edc31d1a60",
+    "output": "meshes/A09_Pitch_fork_arm_1.stl",
+    "triangles": 2108,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.084
+    ],
+    "bounds_metres": [
+      [
+        -0.034,
+        0.091,
+        0.00399999999999999
+      ],
+      [
+        0.034,
+        0.142,
+        0.15999999999999998
+      ]
+    ],
+    "link": "yaw_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A10_MG996R_slotted_mounting_frame.stl",
+    "source_sha256": "8cbcb18298822159956d3533e478e36a7660ff38ba6f58d1743f9fdd75162f2f",
+    "output": "meshes/A10_MG996R_slotted_mounting_frame.stl",
+    "triangles": 2112,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.084
+    ],
+    "bounds_metres": [
+      [
+        -0.035,
+        0.142,
+        0.03699999999999999
+      ],
+      [
+        0.035,
+        0.167,
+        0.09899999999999999
+      ]
+    ],
+    "link": "yaw_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A11_Pitch_gear_60T_module1p5.stl",
+    "source_sha256": "c15daced08be59f331651892ac00a7992cc523d410fe3db60d0c95957186cd4a",
+    "output": "meshes/A11_Pitch_gear_60T_module1p5.stl",
+    "triangles": 3884,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.23
+    ],
+    "bounds_metres": [
+      [
+        -0.04649689483642577,
+        0.145,
+        -0.04649688720703127
+      ],
+      [
+        0.04649689292907715,
+        0.164,
+        0.04649688720703124
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A12_Servo_horn_pinion_30T_module1p5.stl",
+    "source_sha256": "a28ad078807151539f0e1bc299d7ad519c51b1fdcd3ec4d32ec7beec6f4acd0a",
+    "output": "meshes/A12_Servo_horn_pinion_30T_module1p5.stl",
+    "triangles": 3124,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.084
+    ],
+    "bounds_metres": [
+      [
+        -0.023994796752929683,
+        0.145,
+        0.054584411621093745
+      ],
+      [
+        0.023994797706604006,
+        0.153,
+        0.10241558837890626
+      ]
+    ],
+    "link": "yaw_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A13_Yaw_thrust_spacer_3mm.stl",
+    "source_sha256": "07191be03defeef8692fcc29af08fd10839d5e39ac5c5bde714ef9c96bf96018",
+    "output": "meshes/A13_Yaw_thrust_spacer_3mm.stl",
+    "triangles": 772,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.084
+    ],
+    "bounds_metres": [
+      [
+        -0.005749999999999998,
+        -0.005749356746673584,
+        -0.029000000000000005
+      ],
+      [
+        0.005747426986694337,
+        0.005749356746673584,
+        -0.026000000000000002
+      ]
+    ],
+    "link": "yaw_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A14_Pitch_inner_spacer_-1.stl",
+    "source_sha256": "7ca3be0618fd2ebf0dfe8e1edb7a7053309f67b29d195338980966568469a1ce",
+    "output": "meshes/A14_Pitch_inner_spacer_-1.stl",
+    "triangles": 768,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.23
+    ],
+    "bounds_metres": [
+      [
+        -0.005749999999999998,
+        -0.13,
+        -0.005750000000000005
+      ],
+      [
+        0.005750000000000002,
+        -0.1265,
+        0.005749999999999977
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A14_Pitch_inner_spacer_1.stl",
+    "source_sha256": "755da29bddc32c9f56046fde9db0da01bf0ec0cc454312889a5faf68dbf8596c",
+    "output": "meshes/A14_Pitch_inner_spacer_1.stl",
+    "triangles": 768,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.23
+    ],
+    "bounds_metres": [
+      [
+        -0.005749999999999998,
+        0.1265,
+        -0.005750000000000005
+      ],
+      [
+        0.005750000000000002,
+        0.13,
+        0.005749999999999977
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A15_Pitch_outer_spacer_-1.stl",
+    "source_sha256": "7206624501661cbefe1572ba1ba940abfc862e3bf2dd1c72fb7138f2cefc2da6",
+    "output": "meshes/A15_Pitch_outer_spacer_-1.stl",
+    "triangles": 904,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.23
+    ],
+    "bounds_metres": [
+      [
+        -0.005749999999999998,
+        -0.145,
+        -0.005750000000000005
+      ],
+      [
+        0.005750000000000002,
+        -0.137,
+        0.005749999999999977
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A15_Pitch_outer_spacer_1.stl",
+    "source_sha256": "6063091b19aab1a3680d4b828b69834432b84afd3c08385dc9f19f3b4bd487c1",
+    "output": "meshes/A15_Pitch_outer_spacer_1.stl",
+    "triangles": 904,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      -0.23
+    ],
+    "bounds_metres": [
+      [
+        -0.005749999999999998,
+        0.137,
+        -0.005750000000000005
+      ],
+      [
+        0.005750000000000002,
+        0.145,
+        0.005749999999999977
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/AimingR4/STL/A16_Flush_lower_yaw_bearing_retainer.stl",
+    "source_sha256": "4013ebb9cfe19a3391181d73e41d4f11636caf2e8d584289162371aa9b3a45f4",
+    "output": "meshes/A16_Flush_lower_yaw_bearing_retainer.stl",
+    "triangles": 2092,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.061,
+        -0.02799686622619629,
+        0.0
+      ],
+      [
+        -0.005012531757354736,
+        0.02799686622619629,
+        0.01
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/AimingR5/A01_Shallow_front_90mm.stl",
+    "source_sha256": "3abb6bbf484a36a97a9f9d639b4d773008877e89aeb0d0ca2a0d4008b602cad4",
+    "output": "meshes/r5_front_cover.stl",
+    "triangles": 4026,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        0.033,
+        -0.11,
+        -0.10995169067382812
+      ],
+      [
+        0.088,
+        0.11,
+        0.10995169067382812
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/ThrowerR2/STL/P01_Rear_housing_-_male_thread.stl",
+    "source_sha256": "0166db8b414842a827bdc16df9a127c41e11913138b4fa33ef258f93874b4b62",
+    "output": "meshes/rear_housing.stl",
+    "triangles": 7030,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.034,
+        -0.10995076751708985,
+        -0.1099876937866211
+      ],
+      [
+        0.049,
+        0.11,
+        0.1099876937866211
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F01_Feeder_pan_-_46mm_discharge.stl",
+    "source_sha256": "8d0e4d53772c9ef3a9b564218391e6bc221083b25e656285b55e1ce3e5155f21",
+    "output": "meshes/F01_Feeder_pan_-_46mm_discharge.stl",
+    "triangles": 6544,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      -0.06,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.381,
+        -0.121,
+        0.344
+      ],
+      [
+        -0.189,
+        0.121,
+        0.39270001220703127
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F02_Loading_cover_-_isolates_outlet.stl",
+    "source_sha256": "48d30ef34a5fb834855848052efa228f2b2743c04b97d6b27475eb3dbdedee31",
+    "output": "meshes/F02_Loading_cover_-_isolates_outlet.stl",
+    "triangles": 1904,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      -0.06,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.381,
+        -0.0959892578125,
+        0.39270001220703127
+      ],
+      [
+        -0.18904296874999998,
+        0.0959892578125,
+        0.3987000122070313
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F04_Basket_200x180_-_approximately_40_to_60_balls.stl",
+    "source_sha256": "4a2046a327c77758af129e146f9ddeba8c5425b8e8be081d7612485ad8d672c5",
+    "output": "meshes/F04_Basket_200x180_-_approximately_40_to_60_balls.stl",
+    "triangles": 10796,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      -0.06,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.447,
+        -0.092,
+        0.3987000122070313
+      ],
+      [
+        -0.243,
+        0.092,
+        0.588
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F07_Feeder_stand_base_-_230x244.stl",
+    "source_sha256": "b476c2e8ee62186208c909709644c06731e998b4e93998fbd263424f17a2946b",
+    "output": "meshes/F07_Feeder_stand_base_-_230x244.stl",
+    "triangles": 1980,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      -0.06,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.4,
+        -0.122,
+        0.0
+      ],
+      [
+        -0.16999999999999998,
+        0.122,
+        0.008
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F08_Stand_post_-9.8_0.8.stl",
+    "source_sha256": "2726b57b184360b8a485ee4ae54841662c1591d4db4a7925c11189545f3b55f4",
+    "output": "meshes/F08_Stand_post_-9.8_0.8.stl",
+    "triangles": 1240,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      -0.06,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.314,
+        -0.121,
+        0.008
+      ],
+      [
+        -0.256,
+        -0.075,
+        0.176
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F08_Stand_post_-9.8_17.6.stl",
+    "source_sha256": "44c2ea70988df4f3644ade6d5e2205dd9363483f8bbef4c7ca79a73bf10d08fb",
+    "output": "meshes/F08_Stand_post_-9.8_17.6.stl",
+    "triangles": 1240,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      -0.06,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.314,
+        -0.121,
+        0.176
+      ],
+      [
+        -0.256,
+        -0.075,
+        0.344
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F08_Stand_post_9.8_0.8.stl",
+    "source_sha256": "ab269a0aa2fa2b96d3409ae123ea9e7a79adc5071b7d9364ddf5056bf7d4cda8",
+    "output": "meshes/F08_Stand_post_9.8_0.8.stl",
+    "triangles": 1240,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      -0.06,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.314,
+        0.075,
+        0.008
+      ],
+      [
+        -0.256,
+        0.121,
+        0.176
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F08_Stand_post_9.8_17.6.stl",
+    "source_sha256": "0d9f76009bfb19c83ba341f3f8c2967692f917f07f8f0adc535af472dfecf2da",
+    "output": "meshes/F08_Stand_post_9.8_17.6.stl",
+    "triangles": 1240,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      -0.06,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.314,
+        0.075,
+        0.176
+      ],
+      [
+        -0.256,
+        0.121,
+        0.344
+      ]
+    ],
+    "link": "base_link"
+  },
+  {
+    "source": "fusion/FeederR3/STL/F03_Four-pocket_rotor_-_90deg_index.stl",
+    "source_sha256": "eea7f8bba99900443805c0b2f1506e856949f079ad6aed4a73fe0b9a09ef091a",
+    "output": "meshes/feeder_rotor.stl",
+    "triangles": 3526,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "translation_metres": [
+      0.225,
+      0,
+      -0.3506
+    ],
+    "bounds_metres": [
+      [
+        -0.086,
+        -0.0859903793334961,
+        6.103515581834529e-09
+      ],
+      [
+        0.08596150207519532,
+        0.0859903793334961,
+        0.04150000610351562
+      ]
+    ],
+    "link": "feeder_link"
+  },
+  {
+    "source": "fusion/ThrowerR2/STL/P04_Wheel_core_-_6.3mm_adapter_bore_-_print_three.stl",
+    "source_sha256": "f97c1e9e001b6f1424567abfeea48f4f31816c5c1f6ab947766dc3bbc6331856",
+    "output": "meshes/wheel_1_core.stl",
+    "triangles": 2132,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        6.123233995736766e-17,
+        0,
+        1.0
+      ],
+      [
+        1.0,
+        0,
+        -6.123233995736766e-17
+      ]
+    ],
+    "translation_metres": [
+      0,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.0315,
+        -0.009000000000000001,
+        -0.0315
+      ],
+      [
+        0.0315,
+        0.009000000000000001,
+        0.0315
+      ]
+    ],
+    "link": "wheel_1_link"
+  },
+  {
+    "source": "fusion/ThrowerR2/STL/P03_Ribbed_A2212_mount_-_print_three.stl",
+    "source_sha256": "cc5f5847593966a7cf9ff2b8dc1eae6e709b1a9102dbe24d64431efa35233ef0",
+    "output": "meshes/motor_1_bracket.stl",
+    "triangles": 1168,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        6.123233995736766e-17,
+        0,
+        1.0
+      ],
+      [
+        1.0,
+        0,
+        -6.123233995736766e-17
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      3.1840816777831182e-18,
+      0.052
+    ],
+    "bounds_metres": [
+      [
+        -0.027999999999999997,
+        -0.063,
+        0.032
+      ],
+      [
+        0.051500000000000004,
+        -0.028999999999999998,
+        0.07200000000000001
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/ThrowerR2/STL/P04_Wheel_core_-_6.3mm_adapter_bore_-_print_three.stl",
+    "source_sha256": "f97c1e9e001b6f1424567abfeea48f4f31816c5c1f6ab947766dc3bbc6331856",
+    "output": "meshes/wheel_2_core.stl",
+    "triangles": 2132,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -0.8660254037844386,
+        0,
+        -0.5000000000000001
+      ],
+      [
+        -0.5000000000000001,
+        0,
+        0.8660254037844386
+      ]
+    ],
+    "translation_metres": [
+      0,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.0315,
+        -0.031779800219209814,
+        -0.02354422863405995
+      ],
+      [
+        0.0315,
+        0.031779800219209814,
+        0.02354422863405995
+      ]
+    ],
+    "link": "wheel_2_link"
+  },
+  {
+    "source": "fusion/ThrowerR2/STL/P03_Ribbed_A2212_mount_-_print_three.stl",
+    "source_sha256": "cc5f5847593966a7cf9ff2b8dc1eae6e709b1a9102dbe24d64431efa35233ef0",
+    "output": "meshes/motor_2_bracket.stl",
+    "triangles": 1168,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -0.8660254037844386,
+        0,
+        -0.5000000000000001
+      ],
+      [
+        -0.5000000000000001,
+        0,
+        0.8660254037844386
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      -0.045033320996790804,
+      -0.026000000000000006
+    ],
+    "bounds_metres": [
+      [
+        -0.027999999999999997,
+        -0.04785382907247957,
+        -0.09055960043841964
+      ],
+      [
+        0.051500000000000004,
+        0.003787187078897976,
+        -0.041114736709748724
+      ]
+    ],
+    "link": "head_link"
+  },
+  {
+    "source": "fusion/ThrowerR2/STL/P04_Wheel_core_-_6.3mm_adapter_bore_-_print_three.stl",
+    "source_sha256": "f97c1e9e001b6f1424567abfeea48f4f31816c5c1f6ab947766dc3bbc6331856",
+    "output": "meshes/wheel_3_core.stl",
+    "triangles": 2132,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0.8660254037844384,
+        0,
+        -0.5000000000000004
+      ],
+      [
+        -0.5000000000000004,
+        0,
+        -0.8660254037844384
+      ]
+    ],
+    "translation_metres": [
+      0,
+      0,
+      0
+    ],
+    "bounds_metres": [
+      [
+        -0.0315,
+        -0.031779800219209814,
+        -0.023544228634059958
+      ],
+      [
+        0.0315,
+        0.031779800219209814,
+        0.023544228634059958
+      ]
+    ],
+    "link": "wheel_3_link"
+  },
+  {
+    "source": "fusion/ThrowerR2/STL/P03_Ribbed_A2212_mount_-_print_three.stl",
+    "source_sha256": "cc5f5847593966a7cf9ff2b8dc1eae6e709b1a9102dbe24d64431efa35233ef0",
+    "output": "meshes/motor_3_bracket.stl",
+    "triangles": 1168,
+    "source_unit": "millimetres",
+    "output_unit": "metres",
+    "rotation": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0.8660254037844384,
+        0,
+        -0.5000000000000004
+      ],
+      [
+        -0.5000000000000004,
+        0,
+        -0.8660254037844384
+      ]
+    ],
+    "translation_metres": [
+      0.033,
+      0.04503332099679079,
+      -0.026000000000000023
+    ],
+    "bounds_metres": [
+      [
+        -0.027999999999999997,
+        0.04221281292110203,
+        -0.010885263290251319
+      ],
+      [
+        0.051500000000000004,
+        0.09385382907247959,
+        0.038559600438419606
+      ]
+    ],
+    "link": "head_link"
+  }
+]

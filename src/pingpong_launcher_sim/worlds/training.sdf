@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<sdf version="1.8">
+  <world name="pingpong_world">
+    <physics name="1ms" type="ignored"><max_step_size>0.001</max_step_size><real_time_factor>1</real_time_factor></physics>
+    <gravity>0 0 -9.81</gravity>
+    <plugin filename="ignition-gazebo-physics-system" name="ignition::gazebo::systems::Physics"/>
+    <plugin filename="ignition-gazebo-user-commands-system" name="ignition::gazebo::systems::UserCommands"/>
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="ignition::gazebo::systems::SceneBroadcaster"/>
+    <scene><ambient>0.6 0.6 0.6 1</ambient><background>0.85 0.89 0.94 1</background><shadows>true</shadows></scene>
+    <light name="sun" type="directional"><pose>0 0 6 0 0 0</pose><direction>-0.4 0.3 -1</direction><diffuse>0.9 0.9 0.9 1</diffuse><specular>0.2 0.2 0.2 1</specular><cast_shadows>true</cast_shadows></light>
+    <model name="ground"><static>true</static><link name="ground_link">
+      <collision name="floor"><geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry></collision>
+      <visual name="floor_visual"><geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry><material><ambient>0.65 0.67 0.7 1</ambient><diffuse>0.65 0.67 0.7 1</diffuse></material></visual>
+    </link></model>
+    <model name="launcher_bench"><static>true</static><pose>-0.20 0 0.38 0 0 0</pose><link name="bench">
+      <collision name="bench"><geometry><box><size>0.72 0.60 0.76</size></box></geometry></collision>
+      <visual name="bench_visual"><geometry><box><size>0.72 0.60 0.76</size></box></geometry><material><ambient>0.36 0.28 0.20 1</ambient><diffuse>0.36 0.28 0.20 1</diffuse></material></visual>
+    </link></model>
+    <model name="table"><static>true</static><pose>1.57 0 0.735 0 0 0</pose><link name="top">
+      <collision name="top"><geometry><box><size>2.74 1.525 0.05</size></box></geometry><surface><bounce><restitution_coefficient>0.85</restitution_coefficient><threshold>0.1</threshold></bounce><friction><ode><mu>0.3</mu><mu2>0.3</mu2></ode></friction></surface></collision>
+      <visual name="top_visual"><geometry><box><size>2.74 1.525 0.05</size></box></geometry><material><ambient>0.04 0.28 0.36 1</ambient><diffuse>0.04 0.28 0.36 1</diffuse></material></visual>
+    </link></model>
+    <model name="net"><static>true</static><pose>1.57 0 0.83625 0 0 0</pose><link name="net_link">
+      <collision name="net"><geometry><box><size>0.005 1.83 0.1525</size></box></geometry></collision>
+      <visual name="net_visual"><geometry><box><size>0.005 1.83 0.1525</size></box></geometry><material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material><transparency>0.45</transparency></visual>
+    </link></model>
+    <include><uri>model://pingpong_launcher</uri><pose>0 0 0.76 0 0 0</pose></include>
+  </world>
+</sdf>
