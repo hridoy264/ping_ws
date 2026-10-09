@@ -1,3 +1,5 @@
+> Historical R5 record. This does not validate the physical R10 robot. See the [current package guide](../README.md) and [head-meter integration record](head_meter_integration.md).
+
 # R5 model geometry and physics scope
 
 The model uses the saved R5 front cover and the retained R2/R3/R4 printable

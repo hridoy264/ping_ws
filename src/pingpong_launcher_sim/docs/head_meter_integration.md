@@ -33,3 +33,14 @@ Spring force and compliant tire properties are unselected. The slide currently h
 Fasteners, teeth, bearing details, optical modules and the nominal spring are detailed visuals; only ball-accessible rails/motor/treads/carriage and simplified hollow-pipe/flange geometry are contact shapes. The optical modules are not functioning beam sensors yet. The spring visual is a nominal envelope and does not deform with carriage travel. Legacy head/enclosure visuals remain approximations, including the old inlet visual without sensor cross-drills; the model is not a final whole-robot CAD rendering.
 
 No new100-ball settling, physical priming, launch, spin or drain-emptying pass is claimed. Those require subsequent contact calibration and loaded tests.
+
+## Ubuntu handoff
+
+Follow the [workspace run guide](../../../README.md) for installation, build and first launch, and the [package guide](../README.md) for controls. The unloaded check uses the installed package prefix and no longer requires a `/ws` directory:
+
+```bash
+# From the workspace root, after sourcing ROS and install/setup.bash:
+python3 src/pingpong_launcher_sim/tools/check_head_meter_runtime.py
+```
+
+The portable check was rerun successfully in the Ubuntu development container. This remains an unloaded joint test; it does not validate physical ball transport.

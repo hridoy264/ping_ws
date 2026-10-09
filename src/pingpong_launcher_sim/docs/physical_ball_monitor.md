@@ -16,8 +16,8 @@ launch impulses.
 ## Build integration
 
 The existing package already finds `ignition-gazebo6`, `ignition-plugin1` with
-`register`, and `ignition-transport11`. Add this independent target to
-`CMakeLists.txt`:
+`register`, and `ignition-transport11`. The following target is already present in
+`CMakeLists.txt`; do not add it again:
 
 ```cmake
 add_library(pingpong_physical_ball_monitor SHARED src/physical_ball_monitor.cpp)

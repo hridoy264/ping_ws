@@ -8,11 +8,11 @@ start a ROS controller or command the feeder by itself.
 
 ## Run an inventory settling check
 
-After building and sourcing the Fortress workspace, launch the completed
-physical world. The path below is the integration target, not a claim that a
-world with that name has already been validated.
+After building and sourcing the Fortress workspace, run from the package directory (`cd src/pingpong_launcher_sim` from the workspace root). The generated world exists, but its full settling/feeding test has not passed. This tool starts its own server; do not separately launch the world.
 
 ```bash
+export IGN_GAZEBO_RESOURCE_PATH="$(ros2 pkg prefix --share pingpong_launcher_sim)/models${IGN_GAZEBO_RESOURCE_PATH:+:$IGN_GAZEBO_RESOURCE_PATH}"
+export IGN_GAZEBO_SYSTEM_PLUGIN_PATH="$(ros2 pkg prefix pingpong_launcher_sim)/lib${IGN_GAZEBO_SYSTEM_PLUGIN_PATH:+:$IGN_GAZEBO_SYSTEM_PLUGIN_PATH}"
 python3 tools/physical_inventory_smoke.py \
   --world worlds/physical_100.sdf \
   --duration 30 --timeout 180 \

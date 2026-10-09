@@ -1,3 +1,5 @@
+> Historical R5 record. This does not validate the physical R10 robot. See the [current package guide](../README.md) and [head-meter integration record](head_meter_integration.md).
+
 # Validation record — 28 September 2026
 
 The package was built and run in an **Ubuntu 22.04 ARM64 container**, using

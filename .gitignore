@@ -4,3 +4,12 @@ log/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Local runtime and benchmark output; source assets live under src/.
+/head_meter_runtime/
+/head_meter_ubuntu_check/
+/performance_trials/
+/*.log
+/*.gazebo.log
+/.DS_Store
+**/.DS_Store

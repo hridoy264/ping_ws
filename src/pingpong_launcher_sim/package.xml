@@ -2,7 +2,7 @@
 <package format="3">
   <name>pingpong_launcher_sim</name>
   <version>0.1.0</version>
-  <description>R5 ping-pong launcher simulation for ROS 2 Humble and Gazebo Fortress.</description>
+  <description>R10 physical ping-pong robot development simulation for ROS 2 Humble and Gazebo Fortress, with a separate legacy R5 mode.</description>
   <maintainer email="maintainer@example.com">PingPong project maintainers</maintainer>
   <license>Apache-2.0</license>
   <buildtool_depend>ament_cmake</buildtool_depend>

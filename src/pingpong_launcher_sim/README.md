@@ -1,125 +1,145 @@
-# R5 launcher — ROS 2 Humble / Gazebo Fortress
+# PingPong R10 physical robot simulation
 
-This package targets **Ubuntu 22.04, ROS 2 Humble, and Gazebo Fortress (Ignition Gazebo 6)**. It contains the R5 CAD visuals, six independently moving joints, ROS command topics, feeder sequencing, and a ball-launch system. It uses native Gazebo controllers and `ros_gz_bridge`; `ros2_control` is not required.
+Current entry point: **`physical.launch.py`**. It loads `worlds/physical_100.sdf`, which includes `models/pingpong_r10/model.sdf` and 100 persistent 40 mm / 2.7 g balls. The model includes the hollow aiming route, powered head meter, sliding idler, installed drain cover and side access panel. Models and CAD-exported meshes are included; Fusion is not required to run them.
 
-## Install and launch on Ubuntu 22.04
+This is a development simulation. An unloaded mechanism test passes; full 100-ball settling, feeding and launching do not yet have a passing validation. Spring force, rubber compliance and launch spin remain uncalibrated. It is not ready to predict hardware performance.
 
-Install ROS 2 Humble using the [official Ubuntu installation guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) first. Fortress is the [recommended Gazebo pairing for Humble](https://gazebosim.org/docs/fortress/ros_installation/). This package does not use Gazebo Classic 11 or Harmonic.
+## Requirements and first build
 
-Extract `PingPong_ROS2_Humble_Fortress.zip` into your Ubuntu home directory. The
-archive contains `ros2_ws/src` only, so the build uses your machine's own paths
-and architecture. Then:
+Use Ubuntu 22.04, ROS 2 Humble and Gazebo Fortress (Ignition Gazebo 6). The [official Gazebo compatibility guide](https://gazebosim.org/docs/fortress/ros_installation/) lists Humble/Fortress as the recommended pairing. Other installed ROS versions need a separate port; do not source Jazzy alongside Humble for these commands.
+
+The examples use `~/ping_ws` as the workspace root, with this package at `~/ping_ws/src/pingpong_launcher_sim`. Adjust only the workspace path if yours differs.
 
 ```bash
-cd ~/ros2_ws
+cd ~/ping_ws
 bash src/pingpong_launcher_sim/scripts/install_ubuntu_dependencies.sh
 source /opt/ros/humble/setup.bash
 colcon build --symlink-install --packages-select pingpong_launcher_sim
 source install/setup.bash
-ros2 launch pingpong_launcher_sim sim.launch.py
 ```
 
-The scene contains the launcher on a bench, a table, and a simple rigid net. The wheels start stopped. For a server without a display:
+The installer expects Humble already installed and uses sudo/apt for dependencies. No Docker is needed on Ubuntu. The Git repository must include the entire source package, not only an SDF or launch file.
+
+## Run and inspect
+
+First run the self-contained unloaded test:
 
 ```bash
-ros2 launch pingpong_launcher_sim sim.launch.py gui:=false
+python3 src/pingpong_launcher_sim/tools/check_head_meter_runtime.py
 ```
 
-An optional starting pose and speed can be supplied with `yaw_deg:=10.0 elevation_deg:=10.0 initial_rpm:=2500.0`. No ball fires automatically. Start only one instance at a time; this first version uses fixed topic and model names.
+It starts/stops its own server. `"pass": true` verifies measured forward/reverse/stop motion, aiming and idler limits. Results go to `~/ping_ws/head_meter_runtime/`; an optional `--output-dir /path/to/results` changes that location.
 
-## Aim, spin up, and fire
-
-In another terminal, source the workspace again:
+Then launch the experimental full scene:
 
 ```bash
-source /opt/ros/humble/setup.bash
-source ~/ros2_ws/install/setup.bash
-
-# x = yaw degrees, y = upward elevation degrees; z is unused.
-ros2 topic pub --once /pingpong/aim geometry_msgs/msg/Vector3 \
-  '{x: 10.0, y: 10.0, z: 0.0}'
-
-# x/y/z = the three wheel speeds, in RPM.
-ros2 topic pub --once /pingpong/wheel_rpm geometry_msgs/msg/Vector3 \
-  '{x: 2500.0, y: 2500.0, z: 2500.0}'
-
-# Wait for the wheels to spin up, then request one shot.
-ros2 service call /pingpong/fire std_srvs/srv/Trigger '{}'
-
-# Observe actual launches and joint feedback.
-ros2 topic echo /pingpong/shot_count
-# In a separate terminal:
-ros2 topic echo /pingpong/joint_states
+ros2 launch pingpong_launcher_sim physical.launch.py
+# Without a display, use this instead:
+# ros2 launch pingpong_launcher_sim physical.launch.py gui:=false
 ```
 
-A successful fire service response means the request was accepted. The controller advances the feeder by 90 degrees, waits for measured position to settle, then requests a ball. The ball system increments `shot_count` only after confirming the ball received its launch velocity. `/pingpong/status` and `/pingpong/ball_status` explain rejection or cancellation. Requests are rejected while another feeder index is pending, when joint feedback is stale, or while any wheel is stopped.
+The launch starts Gazebo and the physical ROS/Gazebo bridge. It does not start the legacy launcher controller. Wheels and feeder controllers initially command zero. Pause/play is available in the Gazebo window. Full-pile physics may run substantially slower than real time; wait for feedback instead of assuming wall-clock time equals simulation time. Ctrl+C stops the launch.
+
+Use one interactive instance at a time. The automated joint test isolates its Gazebo transport partition. For separate manual sessions, set both `ROS_DOMAIN_ID` and `IGN_PARTITION` consistently in their relevant terminals.
+
+## Commands from a second terminal
+
+Source the same workspace in every terminal:
 
 ```bash
-ros2 service call /pingpong/stop std_srvs/srv/Trigger '{}'
-```
-
-Stop cancels a pending feeder sequence and commands zero wheel speed; it holds the feeder at its current position. It does not remove balls already in flight.
-
-## Interfaces and units
-
-| ROS interface | Type | Meaning |
-|---|---|---|
-| `/pingpong/aim` | `geometry_msgs/msg/Vector3` | x yaw: −25..+25°, y elevation: −10..+20° |
-| `/pingpong/wheel_rpm` | `geometry_msgs/msg/Vector3` | x/y/z wheel 1/2/3: 0..6000 RPM |
-| `/pingpong/fire` | `std_srvs/srv/Trigger` | One feeder index and launch request |
-| `/pingpong/stop` | `std_srvs/srv/Trigger` | Stop wheel commands, cancel queued shot |
-| `/pingpong/joint_states` | `sensor_msgs/msg/JointState` | Measured radians and radians/second |
-| `/pingpong/shot_count` | `std_msgs/msg/UInt32` | Confirmed launch count since simulation start/reset |
-| `/pingpong/status` | `std_msgs/msg/String` | ROS sequencing status |
-| `/pingpong/ball_status` | `std_msgs/msg/String` | Ball-system status |
-| `/clock` | `rosgraph_msgs/msg/Clock` | Simulation time |
-| `/pingpong/dynamic_poses` | `tf2_msgs/msg/TFMessage` | Gazebo entity poses, including launched balls |
-
-Coordinates are meters: +X forward, +Y left, +Z up. Positive yaw turns left. The underlying pitch joint rotates about +Y, so **positive elevation means negative pitch joint angle**. Each wheel axis is oriented so positive speed would drive the ball forward. Mesh vertices have already been converted from millimeters to meters.
-
-The raw `*_cmd` topics and `/pingpong/fire_request` are bridge interfaces used by the controller. Do not publish to them simultaneously with the controller: it republishes its setpoints at 20 Hz. A separate ROS domain can isolate this simulation from other ROS work (`export ROS_DOMAIN_ID=42` before every relevant terminal).
-
-## Simulation fidelity
-
-The aiming and wheel/feeder motions are simulated joints. CAD visuals retain the R5 shallow 90 mm outlet cover and retained R4/R3 parts; collisions are simplified for stability. Masses, inertias, controller gains, motor limits, contact coefficients and aerodynamic values are **initial estimates**, not measurements. The 6000 RPM command limit is a simulation setting, not a physical operating rating.
-
-The ball model deliberately starts a 40 mm, 2.7 g sphere just beyond the outlet after feeder indexing. Its initial forward speed is:
-
-```text
-speed = efficiency × 0.0325 m × mean(measured wheel angular velocities)
-default efficiency = 0.75
-```
-
-Gazebo then simulates gravity and collisions, with approximate quadratic air drag. Different wheel speeds currently affect the mean launch speed only. **Wheel contact, rubber compression, ball spin/Magnus force, basket singulation, and ball transport through the flexible hose are not modeled.** The displayed feeder rotates, but there is no inventory of balls passing through its pockets. This package can test aiming, commands, sequencing and approximate trajectories; it cannot establish jam-free feeding or accurate spin shots. Table/net contacts are coarse approximations too.
-
-Tune `<plugin name="pingpong::BallLauncher">` in `models/pingpong_launcher/model.sdf` to change efficiency, drag, ball mass/radius, maximum active balls and lifetime. The default sphere spawn pose is 25 mm beyond the cover exit; changing ball radius also requires checking this clearance. Rebuild after editing installed assets, or use `--symlink-install` as above. See [geometry notes](docs/geometry.md) for CAD transforms and collision approximations.
-
-## Tests
-
-```bash
-cd ~/ros2_ws
+cd ~/ping_ws
 source /opt/ros/humble/setup.bash
 source install/setup.bash
-colcon test --packages-select pingpong_launcher_sim --event-handlers console_direct+
-colcon test-result --verbose
-
-# Starts and stops its own headless Gazebo instance:
-python3 src/pingpong_launcher_sim/test/runtime_smoke.py
 ```
 
-The runtime test checks feedback, aiming, all wheel velocities, five successive
-shots (crossing a full feeder revolution), sustained ball movement, and stopping
-with a pending shot. Run it with no other simulation instance using the same ROS
-domain. See `docs/validation.md` for the recorded results and limitations.
+All command topics below use `std_msgs/msg/Float64`. Angles are **radians** and speeds are **radians per second**, not degrees or RPM.
+
+```bash
+# Aim: approximately +8.6 degrees yaw and +5.7 degrees upward pitch.
+ros2 topic pub --once /pingpong/yaw_cmd std_msgs/msg/Float64 '{data: 0.15}'
+ros2 topic pub --once /pingpong/pitch_cmd std_msgs/msg/Float64 '{data: 0.10}'
+
+# Turn the head-transfer roller/motor at 2 rad/s, then stop it.
+ros2 topic pub --once /pingpong/head_meter_velocity_cmd std_msgs/msg/Float64 '{data: 2.0}'
+ros2 topic pub --once /pingpong/head_meter_velocity_cmd std_msgs/msg/Float64 '{data: 0.0}'
+```
+
+Publish those last two commands separately to observe motion between them. Negative head-meter velocity reverses it. This command tests mechanism motion; it is not a one-ball firing command. There is currently no automatic physical-mode prime/fire/jam-recovery service.
+
+| Topic | Meaning |
+|---|---|
+| `/pingpong/yaw_cmd` |−0.4363..+0.4363rad (±25°); positive turns forward axis toward−Y |
+| `/pingpong/pitch_cmd` |−0.3491..+0.5236rad (−20..+30°); positive raises muzzle |
+| `/pingpong/head_meter_velocity_cmd` | Motor and transfer roller, ideal 1:1 velocity; positive feeds toward+X |
+| `/pingpong/physical_feeder_velocity_cmd` | Lower six-pocket feeder velocity; priming trial uses 0.3 rad/s |
+| `/pingpong/wheel_1_cmd`, `/pingpong/wheel_2_cmd`, `/pingpong/wheel_3_cmd` | Individual launcher-wheel velocities; contact/launch not calibrated |
+
+The idler is passive and has 0..2 mm outward travel; it has no command topic. Its spring stiffness is currently zero because hardware force has not been selected. The modeled drain cover and access panel remain installed/fixed; no automatic drain command exists.
+
+For a deliberate lower-feeder experiment, start slowly and observe the actual balls. This is not a validated batch recipe:
+
+```bash
+ros2 topic pub --once /pingpong/physical_feeder_velocity_cmd std_msgs/msg/Float64 '{data: 0.3}'
+```
+
+## Feedback and stopping
+
+Each echo command runs until Ctrl+C; use separate terminals if needed:
+
+```bash
+ros2 topic echo /pingpong/joint_states
+ros2 topic echo /pingpong/physical_ball_inventory
+ros2 topic echo /pingpong/physical_shot_count
+```
+
+Joint feedback includes the driven roller, motor, idler rotation and idler slide. Inventory is a JSON string containing physical ball identities and observed accounting. A zero shot count may simply mean no ball passed through the muzzle; 100 entities being present is not a feed pass.
+
+To stop commanded rotating actuators while keeping Gazebo open:
+
+```bash
+ros2 topic pub --once /pingpong/physical_feeder_velocity_cmd std_msgs/msg/Float64 '{data: 0.0}'
+ros2 topic pub --once /pingpong/head_meter_velocity_cmd std_msgs/msg/Float64 '{data: 0.0}'
+ros2 topic pub --once /pingpong/wheel_1_cmd std_msgs/msg/Float64 '{data: 0.0}'
+ros2 topic pub --once /pingpong/wheel_2_cmd std_msgs/msg/Float64 '{data: 0.0}'
+ros2 topic pub --once /pingpong/wheel_3_cmd std_msgs/msg/Float64 '{data: 0.0}'
+```
+
+Commands take effect as simulation advances; they do not freeze existing balls. Yaw/pitch retain their setpoints. For a fresh 100-ball load, stop the launch with Ctrl+C and launch again. Do not assume resetting the shot counter reloads inventory.
+
+## Tests and rebuilding
+
+```bash
+cd ~/ping_ws
+colcon test --packages-select pingpong_launcher_sim --event-handlers console_direct+
+colcon test-result --verbose
+python3 -m unittest discover -s src/pingpong_launcher_sim/test -p 'test_*.py'
+```
+
+The source suite includes both current physical-model invariants and legacy tests. After source changes or `git pull`, run `colcon build --symlink-install --packages-select pingpong_launcher_sim` and source `install/setup.bash` again.
+
+Normally use the committed generated models. Developers can regenerate the R10 model/world from packaged inputs:
+
+```bash
+python3 src/pingpong_launcher_sim/tools/build_physical_model.py
+```
+
+This overwrites the generated R10 SDF, collision meshes, generation manifest and seeded 100-ball world. It does not modify Fusion. New CAD exports require the separate Fusion development workflow; simply running the generator does not export changed CAD.
 
 ## Troubleshooting
 
-- `ign: command not found`: install `ignition-fortress` / `ros-humble-ros-gz` using the dependency script. Fortress uses the `ign gazebo` command.
-- Model or plugin cannot be found: source this workspace and use `sim.launch.py`; it sets `IGN_GAZEBO_RESOURCE_PATH` and `IGN_GAZEBO_SYSTEM_PLUGIN_PATH` from the installed package.
-- GUI unavailable in SSH, Docker, or a VM: use `gui:=false`. On a local Ubuntu desktop, confirm OpenGL works; `LIBGL_ALWAYS_SOFTWARE=1` can help with a VM graphics driver.
-- Fire rejected: unpause Gazebo, check joint feedback, and let all three wheels spin up. The controller operates in simulation time.
-- `/clock` exists but no joints: check the launch output for missing physics or controller plugins, and verify you installed Fortress rather than a different Gazebo release.
+- `ign` missing: run the dependency installer. Fortress uses `ign gazebo`; this package does not use Gazebo Classic's `gazebo` command.
+- Package not found: build from the workspace containing `src/` and source that workspace's `install/setup.bash` in this terminal.
+- Missing model/plugin: use `physical.launch.py`, which sets installed resource/plugin paths. Keep all mesh files in Git and rebuild on Ubuntu; do not reuse Mac build outputs.
+- Wrong ROS version: confirm `echo "$ROS_DISTRO"` prints `humble` after sourcing `/opt/ros/humble/setup.bash` in a fresh terminal.
+- No GUI over SSH/Docker: use `gui:=false`. For a local VM graphics issue, try `LIBGL_ALWAYS_SOFTWARE=1 ros2 launch pingpong_launcher_sim physical.launch.py`; this fallback has not been validated on your machine.
+- Extremely slow pile: the 100-ball contact/settling problem is still open. Use the unloaded test to distinguish installation/joint problems from loaded physics; do not interpret a slow pile as successful feeding.
+- `/pingpong/fire` or `/pingpong/aim` missing: those belong to the legacy mode. Use the physical topics above.
 
-## Reproducibility and source assets
+## Records and legacy mode
 
-The delivered meshes are self-contained; Fusion and the original workspace paths are not needed to build or run. The optional `tools/build_model.py` generator reads the original project CAD exports when regenerating model geometry. Original Fusion files are not modified. Imported reference CAD and CAD-derived geometry retain their original ownership; the package is intended for this project, and does not grant a redistribution license for third-party reference models.
+- [Current head-meter/drain integration and limitations](docs/head_meter_integration.md)
+- [Physical inventory test protocol](docs/physical_inventory_test_protocol.md)
+- [Physical monitor protocol](docs/physical_ball_monitor.md)
+- [Historical R5 instructions](docs/legacy_r5_guide.md): `sim.launch.py`/`training.sdf`, with an abstract create-at-muzzle ball system. Its firing demonstrations do not validate physical R10 feeding.
+
+Imported reference CAD retains its original ownership; the source package does not grant redistribution rights for third-party reference models. See `NOTICE` and `LICENSE`.

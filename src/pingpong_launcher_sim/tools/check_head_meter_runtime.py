@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Unloaded native joint test. Not a 100-ball feeding or launch validation."""
-import json,os,queue,subprocess,threading,time,uuid
+import argparse,json,os,queue,subprocess,threading,time,uuid
+from ament_index_python.packages import get_package_prefix
 from pathlib import Path
 import xml.etree.ElementTree as ET
 import physical_feed_trial as feed
 from test_physical_monitor import stop
 PACKAGE=Path(__file__).resolve().parents[1]
-OUT=Path('/ws/head_meter_runtime');OUT.mkdir(exist_ok=True)
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--output-dir',type=Path,default=PACKAGE.parents[1]/'head_meter_runtime')
+OUT=parser.parse_args().output_dir.resolve();OUT.mkdir(parents=True,exist_ok=True)
 feed.JOINTS=feed.JOINTS+('head_meter_roller_joint','head_meter_motor_joint','head_meter_idler_joint','head_meter_idler_slide')
 root=ET.parse(PACKAGE/'worlds/physical_100.sdf').getroot();world=root.find('world');world.set('name','meter_joint_check')
 for m in list(world.findall('model')):
@@ -14,7 +17,7 @@ for m in list(world.findall('model')):
 ET.ElementTree(root).write(OUT/'unloaded.sdf')
 env=dict(os.environ,IGN_PARTITION='meter-'+uuid.uuid4().hex)
 env['IGN_GAZEBO_RESOURCE_PATH']=str(PACKAGE/'models')+':'+env.get('IGN_GAZEBO_RESOURCE_PATH','')
-env['IGN_GAZEBO_SYSTEM_PLUGIN_PATH']='/ws/install/pingpong_launcher_sim/lib:'+env.get('IGN_GAZEBO_SYSTEM_PLUGIN_PATH','')
+env['IGN_GAZEBO_SYSTEM_PLUGIN_PATH']=str(Path(get_package_prefix('pingpong_launcher_sim'))/'lib')+':'+env.get('IGN_GAZEBO_SYSTEM_PLUGIN_PATH','')
 q=queue.Queue();server=sub=None;report={'scope':'Unloaded full mechanism; no balls in this diagnostic; canonical world still contains100.','pass':False,'samples':[]}
 def command(topic,value):
  subprocess.run(['ign','topic','-t',topic,'-m','ignition.msgs.Double','-p','data: '+str(value)],env=env,check=True,timeout=8,stdout=subprocess.DEVNULL)
