@@ -1,0 +1,101 @@
+{
+  "test": "physical_ball_monitor_native",
+  "passed": true,
+  "cases": [
+    {
+      "case": "forward_gravity",
+      "passed": true,
+      "samples": 158,
+      "sim_end": 0.801,
+      "persistent_entity_ids": [
+        7,
+        8
+      ],
+      "physical_shot_count": 1,
+      "observed_forward_plane_crossings": 1,
+      "observed_reverse_plane_crossings": 0,
+      "maximum_ball_displacement_m": 3.150981809999983,
+      "maximum_deviation_from_initial_mouth_frame_m": 3.283742556314929e-16,
+      "missing_inventory_failure_detected": false
+    },
+    {
+      "case": "reverse_gravity",
+      "passed": true,
+      "samples": 157,
+      "sim_end": 0.8,
+      "persistent_entity_ids": [
+        7,
+        8
+      ],
+      "physical_shot_count": 0,
+      "observed_forward_plane_crossings": 0,
+      "observed_reverse_plane_crossings": 1,
+      "maximum_ball_displacement_m": 3.143123999999983,
+      "maximum_deviation_from_initial_mouth_frame_m": 3.2120303712323147e-16,
+      "missing_inventory_failure_detected": false
+    },
+    {
+      "case": "moving_mouth_forward",
+      "passed": true,
+      "samples": 231,
+      "sim_end": 1.205,
+      "persistent_entity_ids": [
+        8,
+        9
+      ],
+      "physical_shot_count": 1,
+      "observed_forward_plane_crossings": 1,
+      "observed_reverse_plane_crossings": 0,
+      "maximum_ball_displacement_m": 7.128093149999946,
+      "maximum_deviation_from_initial_mouth_frame_m": 0.5530228660349298,
+      "missing_inventory_failure_detected": false
+    },
+    {
+      "case": "moving_mouth_stationary_ball",
+      "passed": true,
+      "samples": 157,
+      "sim_end": 0.8,
+      "persistent_entity_ids": [
+        7,
+        8
+      ],
+      "physical_shot_count": 0,
+      "observed_forward_plane_crossings": 1,
+      "observed_reverse_plane_crossings": 0,
+      "maximum_ball_displacement_m": 0.0,
+      "maximum_deviation_from_initial_mouth_frame_m": 3.143123999999984,
+      "missing_inventory_failure_detected": false
+    },
+    {
+      "case": "repeated_pendulum",
+      "passed": true,
+      "samples": 1037,
+      "sim_end": 6.004,
+      "persistent_entity_ids": [
+        7,
+        8
+      ],
+      "physical_shot_count": 1,
+      "observed_forward_plane_crossings": 5,
+      "observed_reverse_plane_crossings": 4,
+      "maximum_ball_displacement_m": 0.33894293381019813,
+      "maximum_deviation_from_initial_mouth_frame_m": 0.0,
+      "missing_inventory_failure_detected": false
+    },
+    {
+      "case": "missing_inventory",
+      "passed": true,
+      "samples": 39,
+      "sim_end": 0.202,
+      "persistent_entity_ids": null,
+      "physical_shot_count": 0,
+      "observed_forward_plane_crossings": 0,
+      "observed_reverse_plane_crossings": 0,
+      "maximum_ball_displacement_m": 0.0,
+      "maximum_deviation_from_initial_mouth_frame_m": 0.0,
+      "missing_inventory_failure_detected": true
+    }
+  ],
+  "artifact_directory": "/ws/physical_monitor_native_report_artifacts",
+  "scope": "Native passive-physics monitor tests only; no robot feeding or contact verdict."
+}

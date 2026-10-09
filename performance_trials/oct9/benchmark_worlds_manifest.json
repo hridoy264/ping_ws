@@ -1,0 +1,67 @@
+{
+  "purpose": "Installed-engine diagnostics only; no canonical geometry changes or acceptance claim",
+  "source_world_sha256": "25c4ddf882307cbe5cf0c533383ae067c2c02cc83c722cce7a8b64e168014627",
+  "snapshot_resource_path": "../oct8/models",
+  "worlds": [
+    {
+      "name": "full_100_ode",
+      "file": "full_100_ode.sdf",
+      "count": 100,
+      "scope": "full",
+      "time_step_s": 0.001,
+      "dart_collision_detector": "ode",
+      "dart_constraint_solver": "default",
+      "physics_engine": "DART",
+      "robot_collisions": 377,
+      "sha256": "793fb66f2a331dd06acdb7aad492c9ac41a1342a4d552ce55689af80e42057f6"
+    },
+    {
+      "name": "full_100_dart",
+      "file": "full_100_dart.sdf",
+      "count": 100,
+      "scope": "full",
+      "time_step_s": 0.001,
+      "dart_collision_detector": "dart",
+      "dart_constraint_solver": "default",
+      "physics_engine": "DART",
+      "robot_collisions": 377,
+      "sha256": "cdf8eeeeda60b4fb4e18cda4da3199ecd6d528d1f0e6ccc4361b8e9e561dc888"
+    },
+    {
+      "name": "full_100_ode_pgs",
+      "file": "full_100_ode_pgs.sdf",
+      "count": 100,
+      "scope": "full",
+      "time_step_s": 0.001,
+      "dart_collision_detector": "ode",
+      "dart_constraint_solver": "pgs",
+      "physics_engine": "DART",
+      "robot_collisions": 377,
+      "sha256": "462ec02019ebce011c8d8e9c5fe0febcc1cdaaf9092a47b5913e1ff2b8050600"
+    },
+    {
+      "name": "full_1_native_bullet",
+      "file": "full_1_native_bullet.sdf",
+      "count": 1,
+      "scope": "full",
+      "time_step_s": 0.001,
+      "dart_collision_detector": "default",
+      "dart_constraint_solver": "default",
+      "physics_engine": "ignition-physics-bullet-plugin",
+      "robot_collisions": 377,
+      "sha256": "25ef5e1a7690602b8b5c4b3b15a25ac8a9abcbcaddec45f93f4aea2cab56f041"
+    },
+    {
+      "name": "full_100_native_bullet",
+      "file": "full_100_native_bullet.sdf",
+      "count": 100,
+      "scope": "full",
+      "time_step_s": 0.001,
+      "dart_collision_detector": "default",
+      "dart_constraint_solver": "default",
+      "physics_engine": "ignition-physics-bullet-plugin",
+      "robot_collisions": 377,
+      "sha256": "6a60b30859899caa3579019a88f258ea6fef9de8566874c041d137aa8aca5343"
+    }
+  ]
+}

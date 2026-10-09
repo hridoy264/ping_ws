@@ -1,0 +1,11 @@
+{
+  "cad_bodies": 68,
+  "max_native_to_stl_bounds_error_mm": 0.006909179687511369,
+  "sdf_sha256": "156f7086b5e574083f6b9964112510b85d6a49eb2074da685343e6b987ee7503",
+  "source_tests_passed": 36,
+  "sdf_valid": true,
+  "package_build_passed": true,
+  "unloaded_joint_runtime_pass": true,
+  "runtime_seconds": 4.806,
+  "full_100_ball_feeding_validated": false
+}

@@ -1,0 +1,72 @@
+{
+  "scope": "Unloaded full mechanism; no balls in this diagnostic; canonical world still contains100.",
+  "pass": false,
+  "error": "head_meter_roller_joint did not reverse",
+  "sample_count": 225,
+  "last": {
+    "sim_time": 4.535,
+    "model_position": [
+      0.0,
+      0.0,
+      0.91
+    ],
+    "model_orientation": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "joints": {
+      "yaw_joint": {
+        "entity": 692,
+        "position": 0.15,
+        "velocity": 4.119968255444917e-18
+      },
+      "pitch_joint": {
+        "entity": 693,
+        "position": 0.099999999999952,
+        "velocity": -2.0539125955565396e-15
+      },
+      "feeder_joint": {
+        "entity": 694,
+        "position": 0.0,
+        "velocity": 0.0
+      },
+      "wheel_1_joint": {
+        "entity": 695,
+        "position": -1.0352829704647215e-17,
+        "velocity": -6.938893903907228e-18
+      },
+      "wheel_2_joint": {
+        "entity": 696,
+        "position": 4.2361947240790434e-18,
+        "velocity": 0.0
+      },
+      "wheel_3_joint": {
+        "entity": 697,
+        "position": -9.946904407365724e-18,
+        "velocity": 3.469446951953614e-18
+      },
+      "head_meter_roller_joint": {
+        "entity": 698,
+        "position": 3.5139999999998697,
+        "velocity": 2.168404344971009e-19
+      },
+      "head_meter_motor_joint": {
+        "entity": 699,
+        "position": 3.5139999999998697,
+        "velocity": 2.168404344971009e-19
+      },
+      "head_meter_idler_joint": {
+        "entity": 700,
+        "position": 0.1500000000000055,
+        "velocity": 2.3867626625095895e-15
+      },
+      "head_meter_idler_slide": {
+        "entity": 701,
+        "position": 0.0013287992524066655,
+        "velocity": -0.00021247787870767846
+      }
+    }
+  }
+}

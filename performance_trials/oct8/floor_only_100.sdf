@@ -1,0 +1,5074 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.8">
+  <world name="floor_only_100">
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+    <gravity>0 0 -9.81</gravity>
+    <plugin filename="ignition-gazebo-physics-system" name="ignition::gazebo::systems::Physics" />
+    <plugin filename="ignition-gazebo-user-commands-system" name="ignition::gazebo::systems::UserCommands" />
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="ignition::gazebo::systems::SceneBroadcaster" />
+    <scene>
+      <ambient>0.6 0.6 0.6 1</ambient>
+      <background>0.85 0.89 0.94 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <light name="sun" type="directional">
+      <pose>0 0 6 0 0 0</pose>
+      <direction>-0.4 0.3 -1</direction>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+    </light>
+    <model name="ground">
+      <static>true</static>
+      <link name="ground_link">
+        <collision name="floor">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="floor_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.65 0.67 0.7 1</ambient>
+            <diffuse>0.65 0.67 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="table">
+      <static>true</static>
+      <pose>1.6700000000000002 0.0 0.735 0.0 0.0 0.0</pose>
+      <link name="top">
+        <collision name="top">
+          <geometry>
+            <box>
+              <size>2.74 1.525 0.05</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.85</restitution_coefficient>
+              <threshold>0.1</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="top_visual">
+          <geometry>
+            <box>
+              <size>2.74 1.525 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.04 0.28 0.36 1</ambient>
+            <diffuse>0.04 0.28 0.36 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="net">
+      <static>true</static>
+      <pose>1.6700000000000002 0.0 0.83625 0.0 0.0 0.0</pose>
+      <link name="net_link">
+        <collision name="net">
+          <geometry>
+            <box>
+              <size>0.005 1.83 0.1525</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="net_visual">
+          <geometry>
+            <box>
+              <size>0.005 1.83 0.1525</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+          <transparency>0.45</transparency>
+        </visual>
+      </link>
+    </model>
+    <model name="launcher_bench">
+      <static>true</static>
+      <link name="bench">
+        <collision name="bench">
+          <pose>-0.0525 0 0.3795 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.675 0.44 0.759</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.1</restitution_coefficient>
+              <threshold>0.1</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="bench_visual">
+          <pose>-0.0525 0 0.3795 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.675 0.44 0.759</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>.32 .25 .19 1</ambient>
+            <diffuse>.32 .25 .19 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_001">
+      <static>false</static>
+      <pose>-0.23351634392092527 -0.14228499354686641 1.1430650175910217 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_002">
+      <static>false</static>
+      <pose>-0.19216607355711071 -0.1418581172715016 1.143306019692454 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_003">
+      <static>false</static>
+      <pose>-0.15016469225937706 -0.14224783670042238 1.1431531530918113 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_004">
+      <static>false</static>
+      <pose>-0.23388212166833716 -0.10056881721511786 1.1432032131728622 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_005">
+      <static>false</static>
+      <pose>-0.19228407841818967 -0.10058069740958803 1.1432899306626678 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_006">
+      <static>false</static>
+      <pose>-0.15037303511163805 -0.1005677356267756 1.1432535594103257 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_007">
+      <static>false</static>
+      <pose>-0.23341434172599332 -0.059096100744193171 1.1433834915510999 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_008">
+      <static>false</static>
+      <pose>-0.19188111636300706 -0.058895849690089208 1.1429932876998874 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_009">
+      <static>false</static>
+      <pose>-0.15012567215667591 -0.058898043272932431 1.1429556475060283 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_010">
+      <static>false</static>
+      <pose>-0.23384197017389993 -0.016991503380191519 1.1432622356188205 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_011">
+      <static>false</static>
+      <pose>-0.19181572303603536 -0.017062160927983704 1.1432217368548729 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_012">
+      <static>false</static>
+      <pose>-0.15011613054161235 -0.017272879373674981 1.1432312243787641 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_013">
+      <static>false</static>
+      <pose>-0.2334023572014482 0.024471111851418554 1.1434170241401866 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_014">
+      <static>false</static>
+      <pose>-0.19195358871284596 0.024522743101728958 1.1429274946301937 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_015">
+      <static>false</static>
+      <pose>-0.15056326103460904 0.024273632778161268 1.1429478751861544 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_016">
+      <static>false</static>
+      <pose>-0.23376032546818337 -0.14223939914235417 1.1846667841618663 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_017">
+      <static>false</static>
+      <pose>-0.19191858933344136 -0.14208110069261795 1.1847221085802704 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_018">
+      <static>false</static>
+      <pose>-0.15057429578153708 -0.14213981330677056 1.1850619927526278 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_019">
+      <static>false</static>
+      <pose>-0.23351117876885205 -0.10033452139659982 1.1846026831889191 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_020">
+      <static>false</static>
+      <pose>-0.19186252392122979 -0.10060195850374286 1.1847276732650549 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_021">
+      <static>false</static>
+      <pose>-0.15010628598961803 -0.10031600014408756 1.184834169846265 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_022">
+      <static>false</static>
+      <pose>-0.23348923144940609 -0.058594288847886117 1.184965599946928 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_023">
+      <static>false</static>
+      <pose>-0.19216257115682153 -0.059080739853657582 1.1846892718288358 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_024">
+      <static>false</static>
+      <pose>-0.15053935547441455 -0.058973410293848207 1.1850657458286014 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_025">
+      <static>false</static>
+      <pose>-0.2333741794241164 -0.017311193271520905 1.1848932631991773 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_026">
+      <static>false</static>
+      <pose>-0.1920626208593636 -0.016951271446155668 1.1847753111115527 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_027">
+      <static>false</static>
+      <pose>-0.15054107190010116 -0.017352023495383603 1.1848368208804982 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_028">
+      <static>false</static>
+      <pose>-0.23374235503488625 0.024450751594134131 1.1850386937301618 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_029">
+      <static>false</static>
+      <pose>-0.19206035969691576 0.024231592455494375 1.1850985225638975 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_030">
+      <static>false</static>
+      <pose>-0.15039428422379411 0.024154545647304283 1.1845282698252551 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_031">
+      <static>false</static>
+      <pose>-0.2338342105217896 -0.14192353237497815 1.226575247618618 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_032">
+      <static>false</static>
+      <pose>-0.19204670401992019 -0.14226188337630885 1.2263289715719041 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_033">
+      <static>false</static>
+      <pose>-0.15010232717185593 -0.14198253139294054 1.2266826470265684 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_034">
+      <static>false</static>
+      <pose>-0.23338353217865931 -0.10069311138683433 1.2265324330916163 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_035">
+      <static>false</static>
+      <pose>-0.19189097377858405 -0.10037781780175474 1.2262600951139717 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_036">
+      <static>false</static>
+      <pose>-0.15031542292085209 -0.10063306869584249 1.2263608591504016 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_037">
+      <static>false</static>
+      <pose>-0.23362776577620248 -0.058527710443487355 1.2266255117642271 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_038">
+      <static>false</static>
+      <pose>-0.19214196656954935 -0.058799648332169829 1.2262071911283183 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_039">
+      <static>false</static>
+      <pose>-0.15015242329639308 -0.058577688858097943 1.2262790668748693 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_040">
+      <static>false</static>
+      <pose>-0.2335166303030804 -0.017134617873137088 1.2261917035611298 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_041">
+      <static>false</static>
+      <pose>-0.19184249351995492 -0.017176372581928216 1.2265671758871786 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_042">
+      <static>false</static>
+      <pose>-0.15038178779668288 -0.017499656862323226 1.2262944936342031 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_043">
+      <static>false</static>
+      <pose>-0.23388831395456849 0.024657459169758776 1.2266272331266941 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_044">
+      <static>false</static>
+      <pose>-0.19180100068238329 0.024284508475241603 1.2261347550998967 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_045">
+      <static>false</static>
+      <pose>-0.15017319424047756 0.024668169667178802 1.2261513920712408 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_046">
+      <static>false</static>
+      <pose>-0.23360840572201003 -0.14225847248891899 1.2681563612991547 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_047">
+      <static>false</static>
+      <pose>-0.19184049934241582 -0.14222296512130017 1.2679851694268596 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_048">
+      <static>false</static>
+      <pose>-0.150370117843903 -0.14214096602263598 1.2682234598246513 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_049">
+      <static>false</static>
+      <pose>-0.23364611723587947 -0.10057292107673477 1.268023577653268 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_050">
+      <static>false</static>
+      <pose>-0.19186204135854601 -0.1005793093619662 1.2678870297747808 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_051">
+      <static>false</static>
+      <pose>-0.15010291038600343 -0.10031007316541635 1.267962860050349 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_052">
+      <static>false</static>
+      <pose>-0.23358945449537866 -0.059027397482479045 1.2678348184022192 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_053">
+      <static>false</static>
+      <pose>-0.19209714866271152 -0.058747014768925666 1.2678380688395581 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_054">
+      <static>false</static>
+      <pose>-0.15056786956932905 -0.059057404148394582 1.2680786617743622 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_055">
+      <static>false</static>
+      <pose>-0.2337626349297133 -0.016956747992196316 1.2682157812401524 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_056">
+      <static>false</static>
+      <pose>-0.19225748559006681 -0.017357197219378596 1.2681013866669779 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_057">
+      <static>false</static>
+      <pose>-0.15057145791557772 -0.017420612890764978 1.2682613085443486 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_058">
+      <static>false</static>
+      <pose>-0.23355737414400482 0.024383602615787082 1.2681707716545747 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_059">
+      <static>false</static>
+      <pose>-0.19181550180134002 0.024214245948617132 1.2677581584885376 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_060">
+      <static>false</static>
+      <pose>-0.15044136929055615 0.024354147173811957 1.2679802148008223 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_061">
+      <static>false</static>
+      <pose>-0.2334625544903241 -0.14189598127162403 1.3098904991268199 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_062">
+      <static>false</static>
+      <pose>-0.19224094927730884 -0.14205842723073867 1.3095035815632372 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_063">
+      <static>false</static>
+      <pose>-0.15018299647818831 -0.14215080619964784 1.3094141253450648 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_064">
+      <static>false</static>
+      <pose>-0.23363083187130013 -0.10044687101609938 1.3094671270868006 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_065">
+      <static>false</static>
+      <pose>-0.19215011613127075 -0.10014604064043441 1.3095658784470323 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_066">
+      <static>false</static>
+      <pose>-0.15018319053714288 -0.10036980481253011 1.3093303529977152 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_067">
+      <static>false</static>
+      <pose>-0.23330043051895236 -0.058598383448952032 1.3098813977543711 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_068">
+      <static>false</static>
+      <pose>-0.19174417981019512 -0.05859078255935142 1.3093997866663627 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_069">
+      <static>false</static>
+      <pose>-0.15040861532472954 -0.058971751620480496 1.3095406241755301 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_070">
+      <static>false</static>
+      <pose>-0.23386481876001669 -0.017272616128613843 1.3098911853062682 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_071">
+      <static>false</static>
+      <pose>-0.1921408781650967 -0.01702955763883085 1.3095730050204037 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_072">
+      <static>false</static>
+      <pose>-0.15044619550840588 -0.01692560941548419 1.3098972536136959 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_073">
+      <static>false</static>
+      <pose>-0.23356653900595664 0.024531044965177801 1.3093928780951647 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_074">
+      <static>false</static>
+      <pose>-0.19212197530470326 0.024681225618981499 1.30964750817449 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_075">
+      <static>false</static>
+      <pose>-0.15037468287917541 0.024548785336227442 1.3093342991637449 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_076">
+      <static>false</static>
+      <pose>-0.23354949344332462 -0.14199828977024831 1.3514116319352292 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_077">
+      <static>false</static>
+      <pose>-0.19220554036323631 -0.14172353265803533 1.3509480668791445 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_078">
+      <static>false</static>
+      <pose>-0.15058850502341153 -0.14194297893613 1.3513051275321626 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_079">
+      <static>false</static>
+      <pose>-0.23375887766299944 -0.10062806803163174 1.3514341723884777 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_080">
+      <static>false</static>
+      <pose>-0.19215227079132682 -0.10034328850787995 1.3512716289061995 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_081">
+      <static>false</static>
+      <pose>-0.15044846505079845 -0.10034979662642528 1.3512136696293193 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_082">
+      <static>false</static>
+      <pose>-0.23333917624535813 -0.058977444480345885 1.3513297150804737 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_083">
+      <static>false</static>
+      <pose>-0.19215678842843051 -0.058862528491925255 1.3513030141337761 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_084">
+      <static>false</static>
+      <pose>-0.15052000175212071 -0.058910293682236894 1.3513511186954488 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_085">
+      <static>false</static>
+      <pose>-0.23385647413130412 -0.017225028686428841 1.3514990726645129 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_086">
+      <static>false</static>
+      <pose>-0.19170234213128695 -0.017456043567340214 1.3510278925873604 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_087">
+      <static>false</static>
+      <pose>-0.15054087975114974 -0.016940044373203768 1.3514285185042121 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_088">
+      <static>false</static>
+      <pose>-0.23337243785450928 0.024321716253243336 1.3509946480994146 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_089">
+      <static>false</static>
+      <pose>-0.19179975302721611 0.024522123955052426 1.3512670066594357 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_090">
+      <static>false</static>
+      <pose>-0.15010766016182109 0.024492385790626445 1.3509046938642915 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_091">
+      <static>false</static>
+      <pose>-0.23340973751893074 -0.14212037274868003 1.39289803322898 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_092">
+      <static>false</static>
+      <pose>-0.19173664199764373 -0.142219425331364 1.3925692572022517 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_093">
+      <static>false</static>
+      <pose>-0.15063577841337433 -0.14196806581546911 1.392663408927389 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_094">
+      <static>false</static>
+      <pose>-0.23353710210378187 -0.10026943268771674 1.3926221583873968 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_095">
+      <static>false</static>
+      <pose>-0.19191945722466897 -0.10054160965902177 1.3927931191112899 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_096">
+      <static>false</static>
+      <pose>-0.15015679810535237 -0.1001923377720231 1.392555379080628 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_097">
+      <static>false</static>
+      <pose>-0.23364585453646178 -0.058933991865616653 1.392502127413453 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_098">
+      <static>false</static>
+      <pose>-0.19183732846618823 -0.058717731973619181 1.3926571731574608 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_099">
+      <static>false</static>
+      <pose>-0.15025526145499121 -0.058768991747324167 1.3927566121513886 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="inventory_ball_100">
+      <static>false</static>
+      <pose>-0.23389419818023499 -0.017454853683955732 1.3930298638359804 0 0 0</pose>
+      <link name="ball_link">
+        <gravity>true</gravity>
+        <inertial>
+          <mass>0.0027000000000000001</mass>
+          <inertia>
+            <ixx>7.1999999999999999e-07</ixx>
+            <iyy>7.1999999999999999e-07</iyy>
+            <izz>7.1999999999999999e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="ball_collision">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.8</restitution_coefficient>
+              <threshold>0.01</threshold>
+            </bounce>
+          </surface>
+        </collision>
+        <visual name="ball_visual">
+          <geometry>
+            <sphere>
+              <radius>0.02</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.96 0.96 0.92 1</ambient>
+            <diffuse>0.96 0.96 0.92 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="pingpong_r10" canonical_link="base_link">
+      <static>true</static>
+      <self_collide>false</self_collide>
+      <link name="base_link">
+        <pose>0 0 0 0 0 0</pose>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>-0.03 0 -0.07 0 0 0</pose>
+          <mass>5.0</mass>
+          <inertia>
+            <ixx>0.05980208333333333</ixx>
+            <iyy>0.15876041666666665</iyy>
+            <izz>0.20104166666666667</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+      </link>
+      <link name="yaw_link">
+        <pose>0.04 -0.1208 0 0 0 0</pose>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0.035 0.14 0 0 0</pose>
+          <mass>0.35</mass>
+          <inertia>
+            <ixx>0.0015866666666666668</ixx>
+            <iyy>0.0014583333333333334</iyy>
+            <izz>0.0007116666666666668</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+      </link>
+      <link name="head_link">
+        <pose>0.04 -0.06 0.185 0 0 0</pose>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0.14 0.06 0 0 0 0</pose>
+          <mass>1.1</mass>
+          <inertia>
+            <ixx>0.01056</ixx>
+            <iyy>0.01056</iyy>
+            <izz>0.01056</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+      </link>
+      <link name="feeder_link">
+        <pose>-0.13 -0.0588 -0.07 0 0 0</pose>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0.01235 0 0 0</pose>
+          <mass>0.09</mass>
+          <inertia>
+            <ixx>0.000191301675</ixx>
+            <iyy>0.000191301675</iyy>
+            <izz>0.00037446</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+      </link>
+      <link name="wheel_1_link">
+        <pose relative_to="head_link">0.165 0.06 0.052 0.0 0.0 0.0</pose>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.035</mass>
+          <inertia>
+            <ixx>1.01871875e-05</ixx>
+            <iyy>1.8484375e-05</iyy>
+            <izz>1.01871875e-05</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>-5.0805620569e-22</iyz>
+          </inertia>
+        </inertial>
+      </link>
+      <link name="wheel_2_link">
+        <pose relative_to="head_link">0.165 0.0149666790032 -0.026 0.0 0.0 0.0</pose>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.035</mass>
+          <inertia>
+            <ixx>1.01871875e-05</ixx>
+            <iyy>1.2261484375e-05</iyy>
+            <izz>1.6410078125e-05</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>-3.59278757748e-06</iyz>
+          </inertia>
+        </inertial>
+      </link>
+      <link name="wheel_3_link">
+        <pose relative_to="head_link">0.165 0.10503332099679999 -0.026 0.0 0.0 0.0</pose>
+        <self_collide>false</self_collide>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.035</mass>
+          <inertia>
+            <ixx>1.01871875e-05</ixx>
+            <iyy>1.2261484375e-05</iyy>
+            <izz>1.6410078125e-05</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>3.59278757748e-06</iyz>
+          </inertia>
+        </inertial>
+      </link>
+      <plugin filename="libpingpong_physical_ball_monitor.so" name="pingpong::PhysicalBallMonitor">
+        <head_link>head_link</head_link>
+        <muzzle_pose>.220 .060 0 0 0 0</muzzle_pose>
+        <aperture_radius>0.045</aperture_radius>
+        <ball_name_prefix>inventory_ball_</ball_name_prefix>
+        <ball_link>ball_link</ball_link>
+        <expected_ball_count>100</expected_ball_count>
+        <publish_rate>5</publish_rate>
+      </plugin>
+      <pose>0 0 0.91 0 0 0</pose>
+    </model>
+  </world>
+</sdf>

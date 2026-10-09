@@ -1,0 +1,8 @@
+{
+  "source_world": "ping_ws/src/pingpong_launcher_sim/worlds/physical_100.sdf",
+  "source_sha256": "7ff86d937bb441577d1b3643fa9e5b0495edb7598f62f0e4fb395be17b42d233",
+  "diagnostic_world": "ping_ws/performance_trials/physical_100_dt5ms.sdf",
+  "time_step_seconds": 0.005,
+  "canonical_time_step_unchanged": 0.001,
+  "purpose": "Feed-only settling performance diagnosis, wheels remain stopped; not launch trajectory validation"
+}

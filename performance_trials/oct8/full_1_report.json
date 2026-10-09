@@ -1,0 +1,126 @@
+{
+  "test": "physical_inventory_smoke",
+  "schema_version": 1,
+  "inventory_pass": true,
+  "feeding_pass": false,
+  "passed": true,
+  "feeding_test_requested": false,
+  "expected_count": 1,
+  "expected_ids": [
+    "inventory_ball_001"
+  ],
+  "measured_snapshots": 11,
+  "incomplete_startup_snapshots": 0,
+  "sim_start": 0.001,
+  "sim_end": 2.006,
+  "sim_duration": 2.005,
+  "minimum_requested_new_shots": 0,
+  "initial_physical_shot_count": 0,
+  "final_physical_shot_count": 0,
+  "new_crossing_count": 0,
+  "new_crossing_ids": [],
+  "world_position_min": [
+    -0.23351634392092527,
+    -0.1422849935468664,
+    0.8599669487300864
+  ],
+  "world_position_max": [
+    -0.1915608730184442,
+    -0.0530257530908622,
+    1.1430552075910216
+  ],
+  "initial_positions": {
+    "inventory_ball_001": [
+      -0.23351634392092527,
+      -0.1422849935468664,
+      1.1430552075910216
+    ]
+  },
+  "final_positions": {
+    "inventory_ball_001": [
+      -0.1930690983131226,
+      -0.053611391009657575,
+      0.8599999901654036
+    ]
+  },
+  "reset_epoch": 0,
+  "persistent_entity_ids": {
+    "inventory_ball_001": [
+      20,
+      21
+    ]
+  },
+  "sampled_pair_clearance_pass": true,
+  "sampled_minimum_pair_spacing_m": null,
+  "sampled_closest_pair": null,
+  "sampled_maximum_pair_penetration_m": 0.0,
+  "maximum_permitted_pair_penetration_m": 0.001,
+  "final_containment_pass": true,
+  "final_outside_containment_ids": [],
+  "containment_world_bounds": [
+    -0.272,
+    -0.1638,
+    0.84,
+    -0.112,
+    0.0462,
+    1.258
+  ],
+  "final_max_sample_displacement_speed_mps": 0.0010469439247978395,
+  "error": null,
+  "scope": "Observed inventory identities and muzzle crossings only; no contact calibration or hardware performance claim.",
+  "wall_duration": 5.042492043999999,
+  "topic": "/pingpong/physical_ball_inventory",
+  "transport_partition": "physical-inventory-48-1791449381",
+  "world": "/ws/performance_trials/oct8/full_1.sdf",
+  "attached": false,
+  "diagnostics": [],
+  "requested_sim_duration": 2.0,
+  "performance_samples": [
+    {
+      "sim_time": 0.001,
+      "wall_since_start_s": 2.691630375999999
+    },
+    {
+      "sim_time": 0.201,
+      "wall_since_start_s": 2.9146712099999945
+    },
+    {
+      "sim_time": 0.401,
+      "wall_since_start_s": 3.150014292999998
+    },
+    {
+      "sim_time": 0.602,
+      "wall_since_start_s": 3.378968834999995
+    },
+    {
+      "sim_time": 0.802,
+      "wall_since_start_s": 3.588074585000001
+    },
+    {
+      "sim_time": 1.003,
+      "wall_since_start_s": 3.7883952929999936
+    },
+    {
+      "sim_time": 1.203,
+      "wall_since_start_s": 3.9895162520000014
+    },
+    {
+      "sim_time": 1.404,
+      "wall_since_start_s": 4.191915002000002
+    },
+    {
+      "sim_time": 1.604,
+      "wall_since_start_s": 4.443102877000001
+    },
+    {
+      "sim_time": 1.805,
+      "wall_since_start_s": 4.666367377
+    },
+    {
+      "sim_time": 2.006,
+      "wall_since_start_s": 4.867502043999991
+    }
+  ],
+  "startup_to_first_snapshot_wall_s": 2.691630375999999,
+  "observed_realtime_factor": 0.9214697858734228
+}

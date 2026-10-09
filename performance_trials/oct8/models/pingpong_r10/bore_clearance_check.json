@@ -1,0 +1,58 @@
+{
+  "sample_count": 505,
+  "neutral_pose_only": true,
+  "minimum_required_diameter_m": 0.044,
+  "passed": true,
+  "paths": {
+    "pan_outlet": {
+      "minimum_centerline_to_wall_m": 0.022737968819537258,
+      "diameter_at_least_m": 0.045475937639074517,
+      "limiting_wall": "lower_elbow_wall_00_00",
+      "location": [
+        -0.0235,
+        -0.1208,
+        -0.048
+      ]
+    },
+    "lower_elbow": {
+      "minimum_centerline_to_wall_m": 0.02248669168239153,
+      "diameter_at_least_m": 0.04497338336478306,
+      "limiting_wall": "lower_elbow_wall_04_04",
+      "location": [
+        0.035432771950677205,
+        -0.1208,
+        -0.01096100594190539
+      ]
+    },
+    "vertical_riser": {
+      "minimum_centerline_to_wall_m": 0.022738350843902293,
+      "diameter_at_least_m": 0.045476701687804585,
+      "limiting_wall": "lower_elbow_wall_05_00",
+      "location": [
+        0.04,
+        -0.1208,
+        0.015366000000000001
+      ]
+    },
+    "yaw_elbow": {
+      "minimum_centerline_to_wall_m": 0.02248669168239153,
+      "diameter_at_least_m": 0.04497338336478306,
+      "limiting_wall": "yaw_elbow_wall_01_04",
+      "location": [
+        0.04,
+        -0.1162327719506772,
+        0.1479610059419054
+      ]
+    },
+    "pitch_elbow": {
+      "minimum_centerline_to_wall_m": 0.02248669168239153,
+      "diameter_at_least_m": 0.04497338336478306,
+      "limiting_wall": "pitch_elbow_wall_04_04",
+      "location": [
+        0.07703899405809461,
+        -0.004567228049322795,
+        0.185
+      ]
+    }
+  }
+}

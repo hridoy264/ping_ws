@@ -1,0 +1,65 @@
+[
+  {
+    "command": [
+      "docker",
+      "desktop",
+      "start",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "Usage:  docker desktop start\n\nStart Docker Desktop\n\nOptions:\n  -d, --detach            Do not synchronously wait for the requested\n                          operation to complete.\n      --timeout seconds   Terminate the running command after the\n                          specified timeout with a non-zero exit code. A\n                          value of zero (the default) or -1 means no timeout.\n",
+    "stderr": "",
+    "wall_s": 0.18281250004656613
+  },
+  {
+    "command": [
+      "docker",
+      "desktop",
+      "start"
+    ],
+    "exit_code": 0,
+    "stdout": "Docker Desktop is already running\n",
+    "stderr": "",
+    "wall_s": 0.0974212079308927
+  },
+  {
+    "command": [
+      "docker",
+      "desktop",
+      "restart",
+      "--timeout",
+      "45"
+    ],
+    "exit_code": 1,
+    "stdout": "\u2717 Failed to stop Docker Desktop\n",
+    "stderr": "stopping Docker Desktop: stopping Docker Desktop: processes still running: /Applications/Docker.app/Contents/MacOS/com.docker.backend (67053) /Applications/Docker.app/Contents/MacOS/com.docker.backend (67054) /Applications/Docker.app/Contents/MacOS/com.docker.backend (67055) /Applications/Docker.app/Contents/MacOS/com.docker.build (67120): context deadline exceeded\n",
+    "wall_s": 45.04819004214369
+  },
+  {
+    "command": [
+      "docker",
+      "desktop",
+      "stop",
+      "--force",
+      "--timeout",
+      "30"
+    ],
+    "exit_code": 0,
+    "stdout": "\u2713 Forcing Docker Desktop to stop\n",
+    "stderr": "",
+    "wall_s": 0.22870724997483194
+  },
+  {
+    "command": [
+      "docker",
+      "desktop",
+      "start",
+      "--timeout",
+      "50"
+    ],
+    "exit_code": 0,
+    "stdout": "\u2713 Starting Docker Desktop\n",
+    "stderr": "",
+    "wall_s": 6.39644116605632
+  }
+]

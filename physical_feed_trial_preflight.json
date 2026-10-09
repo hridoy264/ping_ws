@@ -1,0 +1,223 @@
+{
+  "test": "physical_feed_priming_trial",
+  "status": "not_run",
+  "passed": false,
+  "source_configuration_valid": true,
+  "physical_ball_count": 100,
+  "staged_diagnostic": false,
+  "full_100_ball_priming_pass": false,
+  "controllers": {
+    "wheel_1_joint": "/pingpong/wheel_1_cmd",
+    "wheel_2_joint": "/pingpong/wheel_2_cmd",
+    "wheel_3_joint": "/pingpong/wheel_3_cmd",
+    "yaw_joint": "/pingpong/yaw_cmd",
+    "pitch_joint": "/pingpong/pitch_cmd",
+    "feeder_joint": "/pingpong/physical_feeder_velocity_cmd"
+  },
+  "inventory_topic": "/pingpong/physical_ball_inventory",
+  "joint_topic": "/pingpong/joint_states",
+  "routes": {
+    "pan_outlet": {
+      "centres": [
+        [
+          -0.03,
+          -0.1208,
+          -0.048
+        ],
+        [
+          -0.02,
+          -0.1208,
+          -0.048
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "base",
+      "coordinate_frame": "neutral_model"
+    },
+    "lower_bend": {
+      "centres": [
+        [
+          -0.02,
+          -0.1208,
+          -0.048
+        ],
+        [
+          -0.004470857293848756,
+          -0.1208,
+          -0.0459555495773441
+        ],
+        [
+          0.009999999999999995,
+          -0.1208,
+          -0.03996152422706632
+        ],
+        [
+          0.022426406871192846,
+          -0.1208,
+          -0.030426406871192854
+        ],
+        [
+          0.031961524227066315,
+          -0.1208,
+          -0.018000000000000006
+        ],
+        [
+          0.037955549577344094,
+          -0.1208,
+          -0.003529142706151244
+        ],
+        [
+          0.039999999999999994,
+          -0.1208,
+          0.011999999999999997
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "base",
+      "coordinate_frame": "neutral_model"
+    },
+    "riser": {
+      "centres": [
+        [
+          0.04,
+          -0.1208,
+          0.012
+        ],
+        [
+          0.04,
+          -0.1208,
+          0.1242
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "base",
+      "coordinate_frame": "neutral_model"
+    },
+    "yaw_elbow": {
+      "centres": [
+        [
+          0.04,
+          -0.12079999999999999,
+          0.125
+        ],
+        [
+          0.04,
+          -0.1187555495773441,
+          0.14052914270615124
+        ],
+        [
+          0.04,
+          -0.11276152422706631,
+          0.155
+        ],
+        [
+          0.04,
+          -0.10322640687119286,
+          0.16742640687119284
+        ],
+        [
+          0.04,
+          -0.0908,
+          0.17696152422706632
+        ],
+        [
+          0.04,
+          -0.07632914270615124,
+          0.1829555495773441
+        ],
+        [
+          0.04,
+          -0.06080000000000001,
+          0.185
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "yaw",
+      "coordinate_frame": "neutral_model"
+    },
+    "head_elbow": {
+      "centres": [
+        [
+          0.04000000000000001,
+          -0.06,
+          0.185
+        ],
+        [
+          0.04204445042265591,
+          -0.04447085729384875,
+          0.185
+        ],
+        [
+          0.048038475772933686,
+          -0.030000000000000002,
+          0.185
+        ],
+        [
+          0.05757359312880715,
+          -0.01757359312880715,
+          0.185
+        ],
+        [
+          0.07,
+          -0.008038475772933686,
+          0.185
+        ],
+        [
+          0.08447085729384876,
+          -0.0020444504226558996,
+          0.185
+        ],
+        [
+          0.1,
+          0.0,
+          0.185
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "head",
+      "coordinate_frame": "neutral_model"
+    },
+    "head": {
+      "centres": [
+        [
+          0.1,
+          0,
+          0.185
+        ],
+        [
+          0.26,
+          0,
+          0.185
+        ]
+      ],
+      "inner_radius_m": 0.0215,
+      "frame": "head",
+      "coordinate_frame": "neutral_model"
+    }
+  },
+  "input_hashes": {
+    "/Users/macbookair/PingPong/ping_ws/src/pingpong_launcher_sim/worlds/physical_100.sdf": "7ff86d937bb441577d1b3643fa9e5b0495edb7598f62f0e4fb395be17b42d233",
+    "/Users/macbookair/PingPong/ping_ws/src/pingpong_launcher_sim/models/pingpong_r10/model.sdf": "ebe2d96697b71ced6feea7b564d3ad56cb18d90cc92f0dc52f8c8f181876e697",
+    "/Users/macbookair/PingPong/ping_ws/src/pingpong_launcher_sim/models/pingpong_r10/generation_manifest.json": "37de6feee9611ae3d5b5fa1326323a4b64e2866948be6f6403bbaed4ac104656"
+  },
+  "requested_sim_duration": 65.0,
+  "requested_settling_duration": 3.0,
+  "feeder_command_rad_s": 0.3,
+  "wall_budget_seconds": 120.0,
+  "priming_planning_estimate": {
+    "scope": "Ideal packed-column lower-bound planning estimate, not a transit result.",
+    "path_to_head_inlet_m": 0.40413657519531143,
+    "path_to_muzzle_m": 0.5641365751953115,
+    "nominal_pocket_period_s": 3.4906585039886595,
+    "ideal_first_outlet_delivery_s": 5.235987755982989,
+    "estimated_balls_to_reach_head_inlet": 12,
+    "estimated_balls_to_reach_muzzle": 16,
+    "ideal_head_inlet_time_s": 43.633231299858245,
+    "ideal_muzzle_time_s": 57.59586531581288,
+    "available_feeding_time_s": 62.0,
+    "duration_covers_ideal_head_arrival": true,
+    "inventory_can_form_estimated_head_column": true,
+    "remaining_path_inventory_needs_physical_drain": true
+  },
+  "scope": "Static preflight only; no simulator, controller or transit result."
+}

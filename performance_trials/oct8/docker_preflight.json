@@ -1,0 +1,5 @@
+{
+  "command": "docker version --format server",
+  "error": "Docker daemon did not respond within 15 seconds",
+  "wall_seconds": 15.006891750032082
+}

@@ -1,0 +1,1196 @@
+{
+  "revision": "R10 physical development",
+  "seed": 42,
+  "ball_count": 100,
+  "ball_loading": "inside and above upper opening; un-settled",
+  "robot_deck_world_z": 0.91,
+  "feeder_origin_m": [
+    -0.13,
+    -0.0588,
+    -0.07
+  ],
+  "bin_center_m": [
+    -0.192,
+    -0.0588
+  ],
+  "table_and_net_center_world_x_m": 1.67,
+  "bench_table_gap_m": 0.015,
+  "yaw_origin_m": [
+    0.04,
+    -0.1208,
+    0
+  ],
+  "pitch_origin_m": [
+    0.04,
+    -0.06,
+    0.185
+  ],
+  "muzzle_model_m": [
+    0.26,
+    0,
+    0.185
+  ],
+  "feed_route_model_m": {
+    "pan_outlet": {
+      "centres": [
+        [
+          -0.03,
+          -0.1208,
+          -0.048
+        ],
+        [
+          -0.02,
+          -0.1208,
+          -0.048
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "base",
+      "coordinate_frame": "neutral_model"
+    },
+    "lower_bend": {
+      "centres": [
+        [
+          -0.02,
+          -0.1208,
+          -0.048
+        ],
+        [
+          -0.004470857293848756,
+          -0.1208,
+          -0.0459555495773441
+        ],
+        [
+          0.009999999999999995,
+          -0.1208,
+          -0.03996152422706632
+        ],
+        [
+          0.022426406871192846,
+          -0.1208,
+          -0.030426406871192854
+        ],
+        [
+          0.031961524227066315,
+          -0.1208,
+          -0.018000000000000006
+        ],
+        [
+          0.037955549577344094,
+          -0.1208,
+          -0.003529142706151244
+        ],
+        [
+          0.039999999999999994,
+          -0.1208,
+          0.011999999999999997
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "base",
+      "coordinate_frame": "neutral_model"
+    },
+    "riser": {
+      "centres": [
+        [
+          0.04,
+          -0.1208,
+          0.012
+        ],
+        [
+          0.04,
+          -0.1208,
+          0.1242
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "base",
+      "coordinate_frame": "neutral_model"
+    },
+    "yaw_elbow": {
+      "centres": [
+        [
+          0.04,
+          -0.12079999999999999,
+          0.125
+        ],
+        [
+          0.04,
+          -0.1187555495773441,
+          0.14052914270615124
+        ],
+        [
+          0.04,
+          -0.11276152422706631,
+          0.155
+        ],
+        [
+          0.04,
+          -0.10322640687119286,
+          0.16742640687119284
+        ],
+        [
+          0.04,
+          -0.0908,
+          0.17696152422706632
+        ],
+        [
+          0.04,
+          -0.07632914270615124,
+          0.1829555495773441
+        ],
+        [
+          0.04,
+          -0.06080000000000001,
+          0.185
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "yaw",
+      "coordinate_frame": "neutral_model"
+    },
+    "head_elbow": {
+      "centres": [
+        [
+          0.04000000000000001,
+          -0.06,
+          0.185
+        ],
+        [
+          0.04204445042265591,
+          -0.04447085729384875,
+          0.185
+        ],
+        [
+          0.048038475772933686,
+          -0.030000000000000002,
+          0.185
+        ],
+        [
+          0.05757359312880715,
+          -0.01757359312880715,
+          0.185
+        ],
+        [
+          0.07,
+          -0.008038475772933686,
+          0.185
+        ],
+        [
+          0.08447085729384876,
+          -0.0020444504226558996,
+          0.185
+        ],
+        [
+          0.1,
+          0.0,
+          0.185
+        ]
+      ],
+      "inner_radius_m": 0.023,
+      "frame": "head",
+      "coordinate_frame": "neutral_model"
+    },
+    "head": {
+      "centres": [
+        [
+          0.1,
+          0,
+          0.185
+        ],
+        [
+          0.26,
+          0,
+          0.185
+        ]
+      ],
+      "inner_radius_m": 0.0215,
+      "frame": "head",
+      "coordinate_frame": "neutral_model"
+    }
+  },
+  "hopper_upper_inner_bounds_m": [
+    [
+      -0.272,
+      -0.1638,
+      0.208
+    ],
+    [
+      -0.112,
+      0.0462,
+      0.348
+    ]
+  ],
+  "initial_ball_bounds_world_m": [
+    [
+      -0.272,
+      -0.1638,
+      1.118
+    ],
+    [
+      -0.112,
+      0.0462,
+      1.4180000000000001
+    ]
+  ],
+  "convex_collision_mesh_count": 111,
+  "total_collision_count": 377,
+  "meshes": [
+    {
+      "file": "feeder_roof_000.stl",
+      "link": "base_link",
+      "volume_m3": 2.4082494916046406e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_001.stl",
+      "link": "base_link",
+      "volume_m3": 9.914721869228588e-05,
+      "triangles": 188,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_002.stl",
+      "link": "base_link",
+      "volume_m3": 3.59734581821114e-06,
+      "triangles": 20,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_003.stl",
+      "link": "base_link",
+      "volume_m3": 1.964104738146986e-06,
+      "triangles": 16,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_004.stl",
+      "link": "base_link",
+      "volume_m3": 1.1211136443964026e-06,
+      "triangles": 16,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_005.stl",
+      "link": "base_link",
+      "volume_m3": 6.778932906538454e-07,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_006.stl",
+      "link": "base_link",
+      "volume_m3": 4.461010376496907e-07,
+      "triangles": 16,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_007.stl",
+      "link": "base_link",
+      "volume_m3": 3.50408469034596e-07,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_008.stl",
+      "link": "base_link",
+      "volume_m3": 4.4254695641531134e-07,
+      "triangles": 16,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_009.stl",
+      "link": "base_link",
+      "volume_m3": 1.2998849481215307e-06,
+      "triangles": 28,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_010.stl",
+      "link": "base_link",
+      "volume_m3": 4.715480671698433e-06,
+      "triangles": 32,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_011.stl",
+      "link": "base_link",
+      "volume_m3": 5.494432646660061e-06,
+      "triangles": 20,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_012.stl",
+      "link": "base_link",
+      "volume_m3": 1.7392429462336197e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_013.stl",
+      "link": "base_link",
+      "volume_m3": 7.204180165917092e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_014.stl",
+      "link": "base_link",
+      "volume_m3": 3.216397671765118e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_015.stl",
+      "link": "base_link",
+      "volume_m3": 1.3322755376301993e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_016.stl",
+      "link": "base_link",
+      "volume_m3": 3.966096282534644e-08,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_017.stl",
+      "link": "base_link",
+      "volume_m3": 2.0137668926951378e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_018.stl",
+      "link": "base_link",
+      "volume_m3": 1.6533746071486856e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_019.stl",
+      "link": "base_link",
+      "volume_m3": 1.3873460230562998e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_020.stl",
+      "link": "base_link",
+      "volume_m3": 1.161750331475863e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_021.stl",
+      "link": "base_link",
+      "volume_m3": 9.694514326930362e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_022.stl",
+      "link": "base_link",
+      "volume_m3": 8.048832984392534e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_023.stl",
+      "link": "base_link",
+      "volume_m3": 6.636597917929749e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_024.stl",
+      "link": "base_link",
+      "volume_m3": 5.42294063366817e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_025.stl",
+      "link": "base_link",
+      "volume_m3": 4.3799386302336027e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_026.stl",
+      "link": "base_link",
+      "volume_m3": 3.485103371566914e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_027.stl",
+      "link": "base_link",
+      "volume_m3": 2.703560554420393e-07,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_028.stl",
+      "link": "base_link",
+      "volume_m3": 1.6042361664092192e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_029.stl",
+      "link": "base_link",
+      "volume_m3": 6.997474065986106e-08,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_030.stl",
+      "link": "base_link",
+      "volume_m3": 1.902190444073368e-08,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "feeder_roof_031.stl",
+      "link": "base_link",
+      "volume_m3": 3.1232357232340723e-10,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_000.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.75174385129061e-06,
+      "triangles": 32,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_001.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.57283304561858e-06,
+      "triangles": 24,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_002.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.9951493722820925e-06,
+      "triangles": 16,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_003.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.995149372282094e-06,
+      "triangles": 16,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_004.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.702783926545159e-05,
+      "triangles": 16,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_005.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.995149372282077e-06,
+      "triangles": 16,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_006.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.8181925244286594e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_007.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.264875557352124e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_008.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.047235599554365e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_009.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.6767062857172175e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_010.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.733371873078221e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_011.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.1730510922112286e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_012.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.2728748307261952e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_013.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.001182150860118e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_014.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.2648755573521295e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_015.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.047235599554361e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_016.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.6767062857172234e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_017.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.2815486811279724e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_018.stl",
+      "link": "feeder_link",
+      "volume_m3": 7.661743981979049e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_019.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.2648755573521231e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_020.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.0472355995543624e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_021.stl",
+      "link": "feeder_link",
+      "volume_m3": 8.744992610222524e-07,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_022.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.9231423303952336e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_023.stl",
+      "link": "feeder_link",
+      "volume_m3": 5.90404972164826e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_024.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.2648755573521253e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_025.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.0472355995543692e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_026.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.6767062857172035e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_027.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.733371873078216e-06,
+      "triangles": 12,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_028.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.8662822177669439e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_029.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.970201171494459e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_030.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.3474398976863e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_031.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.347439897686317e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_032.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.1420788368886924e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_033.stl",
+      "link": "feeder_link",
+      "volume_m3": 6.649607976597933e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_034.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.8724014364362103e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_035.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.0527611665944176e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_036.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.347439897686329e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_037.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.3474398976863074e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_038.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.1420788368886924e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_039.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.103899731379935e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_040.stl",
+      "link": "feeder_link",
+      "volume_m3": 5.737743617332366e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_041.stl",
+      "link": "feeder_link",
+      "volume_m3": 6.624538864494193e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_042.stl",
+      "link": "feeder_link",
+      "volume_m3": 6.577733338150057e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_043.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.924936831122063e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_044.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.6000416589216576e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_045.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.3474398976862994e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_046.stl",
+      "link": "feeder_link",
+      "volume_m3": 5.330358709976683e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_047.stl",
+      "link": "feeder_link",
+      "volume_m3": 8.251202860985037e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_048.stl",
+      "link": "feeder_link",
+      "volume_m3": 5.195944180842072e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_049.stl",
+      "link": "feeder_link",
+      "volume_m3": 7.790695737331247e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_050.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.5230458894531024e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_051.stl",
+      "link": "feeder_link",
+      "volume_m3": 5.724193731731694e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_052.stl",
+      "link": "feeder_link",
+      "volume_m3": 7.179542387839335e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_053.stl",
+      "link": "feeder_link",
+      "volume_m3": 7.754892260490298e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_054.stl",
+      "link": "feeder_link",
+      "volume_m3": 7.397189587698332e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_055.stl",
+      "link": "feeder_link",
+      "volume_m3": 6.139418599349001e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_056.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.097559998352081e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_057.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.4598962287928606e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_058.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.3474398976863227e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_059.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.142078836888703e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_060.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.1980073337645897e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_061.stl",
+      "link": "feeder_link",
+      "volume_m3": 2.155437907461722e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_062.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.696148923033198e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_063.stl",
+      "link": "feeder_link",
+      "volume_m3": 8.624920166243967e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_064.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.1438757178508692e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_065.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.0463925596416647e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_066.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.3474398976862354e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_067.stl",
+      "link": "feeder_link",
+      "volume_m3": 4.347439897686322e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_068.stl",
+      "link": "feeder_link",
+      "volume_m3": 3.1420788368886723e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_069.stl",
+      "link": "feeder_link",
+      "volume_m3": 6.649607976597963e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_070.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.8724014364362137e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_071.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.810109638947189e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_072.stl",
+      "link": "feeder_link",
+      "volume_m3": 1.362941453264041e-06,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_073.stl",
+      "link": "feeder_link",
+      "volume_m3": 5.721308408748402e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_074.stl",
+      "link": "feeder_link",
+      "volume_m3": 5.812930825204687e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_075.stl",
+      "link": "feeder_link",
+      "volume_m3": 9.230042305314545e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_076.stl",
+      "link": "feeder_link",
+      "volume_m3": 9.616401368019646e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "rotor_077.stl",
+      "link": "feeder_link",
+      "volume_m3": 6.936381340353874e-07,
+      "triangles": 8,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "stripper_nose_000.stl",
+      "link": "base_link",
+      "volume_m3": 1.3976228435535686e-06,
+      "triangles": 92,
+      "convex_cell": true,
+      "collision": true
+    },
+    {
+      "file": "loading_neck_visual_mesh.stl",
+      "link": "base_link",
+      "volume_m3": 3.873089144921793e-05,
+      "triangles": 384,
+      "convex_cell": false,
+      "collision": false
+    },
+    {
+      "file": "funnel_visual_mesh.stl",
+      "link": "base_link",
+      "volume_m3": 0.00020525573078310574,
+      "triangles": 512,
+      "convex_cell": false,
+      "collision": false
+    },
+    {
+      "file": "pan_outlet_visual_mesh.stl",
+      "link": "base_link",
+      "volume_m3": 4.500357164613411e-06,
+      "triangles": 192,
+      "convex_cell": false,
+      "collision": false
+    },
+    {
+      "file": "lower_elbow_visual_mesh.stl",
+      "link": "base_link",
+      "volume_m3": 4.193201318275959e-05,
+      "triangles": 1152,
+      "convex_cell": false,
+      "collision": false
+    },
+    {
+      "file": "vertical_riser_visual_mesh.stl",
+      "link": "base_link",
+      "volume_m3": 5.0494007386963045e-05,
+      "triangles": 192,
+      "convex_cell": false,
+      "collision": false
+    },
+    {
+      "file": "yaw_elbow_visual_mesh.stl",
+      "link": "yaw_link",
+      "volume_m3": 4.193201318275946e-05,
+      "triangles": 1152,
+      "convex_cell": false,
+      "collision": false
+    },
+    {
+      "file": "pitch_elbow_visual_mesh.stl",
+      "link": "head_link",
+      "volume_m3": 4.193201318275946e-05,
+      "triangles": 1152,
+      "convex_cell": false,
+      "collision": false
+    }
+  ],
+  "runtime_validated": false,
+  "feeding_validated": false,
+  "cad_visual_match_finalized": false,
+  "limitations": [
+    "Estimated masses and ideal velocity-driven actuator dynamics.",
+    "Feeder pockets use convex prisms; pipe bores use circumscribed box panels.",
+    "Hopper contact funnel is a four-plane approximation of the CAD round-to-rectangle loft.",
+    "Deck collision holes are conservative rectangular openings; cosmetic fillets and shaft bore omitted.",
+    "Retained 39 mm rigid wheel gap does not model rubber deformation.",
+    "Self-collision disabled; CAD checks must establish assembly clearance.",
+    "No launch impulse, ball replacement or expiry plugin."
+  ]
+}

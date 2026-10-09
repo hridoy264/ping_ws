@@ -1,0 +1,1231 @@
+{
+  "source_archive": "R10_Integrated_Head_Feeder_and_Drain.f3d",
+  "units": "mm",
+  "frame": "neutral_model",
+  "records": [
+    {
+      "file": "cad_meter_000.stl",
+      "link": "head_link",
+      "part": "REF_R10_Optical_module_168_-1_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          166.0,
+          -29.49999999999993,
+          183.00000000000006
+        ],
+        [
+          170.0,
+          -25.499999999999922,
+          187.00000000000003
+        ]
+      ],
+      "volume_mm3": 63.999999999999616
+    },
+    {
+      "file": "cad_meter_001.stl",
+      "link": "head_link",
+      "part": "REF_R10_Optical_module_234_-1_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          232.00000000000003,
+          -29.49999999999993,
+          183.00000000000006
+        ],
+        [
+          236.0,
+          -25.499999999999922,
+          187.00000000000003
+        ]
+      ],
+      "volume_mm3": 63.999999999999616
+    },
+    {
+      "file": "cad_meter_002.stl",
+      "link": "head_link",
+      "part": "REF_R10_Optical_module_168_1_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          166.00000000000009,
+          25.500000000000146,
+          183.00000000000006
+        ],
+        [
+          170.00000000000006,
+          29.500000000000153,
+          187.00000000000003
+        ]
+      ],
+      "volume_mm3": 63.999999999999616
+    },
+    {
+      "file": "cad_meter_003.stl",
+      "link": "head_link",
+      "part": "REF_R10_Optical_module_234_1_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          232.0000000000001,
+          25.500000000000146,
+          183.00000000000006
+        ],
+        [
+          236.00000000000009,
+          29.500000000000153,
+          187.00000000000003
+        ]
+      ],
+      "volume_mm3": 63.999999999999616
+    },
+    {
+      "file": "cad_meter_004.stl",
+      "link": "head_link",
+      "part": "REF_R10_Driven_3x6x2p5_bearing_194_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          189.00000000000006,
+          22.000000000000142,
+          194.00000000000006
+        ],
+        [
+          195.00000000000006,
+          28.000000000000146,
+          196.50000000000006
+        ]
+      ],
+      "volume_mm3": 53.014376029330336
+    },
+    {
+      "file": "cad_meter_005.stl",
+      "link": "head_link",
+      "part": "REF_R10_Driven_3x6x2p5_bearing_197.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          189.00000000000006,
+          22.000000000000142,
+          197.50000000000006
+        ],
+        [
+          195.00000000000006,
+          28.000000000000146,
+          200.00000000000006
+        ]
+      ],
+      "volume_mm3": 53.014376029330336
+    },
+    {
+      "file": "cad_meter_006.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_guide_screw_186_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          185.0,
+          -26.999999999999925,
+          193.8000000000001
+        ],
+        [
+          187.00000000000003,
+          -24.999999999999925,
+          205.60000000000002
+        ]
+      ],
+      "volume_mm3": 37.07079331235774
+    },
+    {
+      "file": "cad_meter_007.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_guide_shoulder_head_186_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          184.00000000000006,
+          -27.99999999999993,
+          192.30000000000004
+        ],
+        [
+          188.00000000000006,
+          -23.99999999999992,
+          193.8000000000001
+        ]
+      ],
+      "volume_mm3": 18.84955592154022
+    },
+    {
+      "file": "cad_meter_008.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_guide_M2_nut_186_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          184.00000000000006,
+          -27.99999999999993,
+          204.00000000000006
+        ],
+        [
+          188.00000000000006,
+          -23.99999999999992,
+          205.60000000000002
+        ]
+      ],
+      "volume_mm3": 14.024069605625066
+    },
+    {
+      "file": "cad_meter_009.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_guide_screw_198_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          197.00000000000003,
+          -26.999999999999925,
+          193.8000000000001
+        ],
+        [
+          199.00000000000006,
+          -24.999999999999925,
+          205.60000000000002
+        ]
+      ],
+      "volume_mm3": 37.07079331235774
+    },
+    {
+      "file": "cad_meter_010.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_guide_shoulder_head_198_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          196.0,
+          -27.99999999999993,
+          192.30000000000004
+        ],
+        [
+          200.0,
+          -23.99999999999992,
+          193.8000000000001
+        ]
+      ],
+      "volume_mm3": 18.84955592154022
+    },
+    {
+      "file": "cad_meter_011.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_guide_M2_nut_198_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          196.0,
+          -27.99999999999993,
+          204.00000000000006
+        ],
+        [
+          200.0,
+          -23.99999999999992,
+          205.60000000000002
+        ]
+      ],
+      "volume_mm3": 14.024069605625066
+    },
+    {
+      "file": "cad_meter_012.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_preload_screw_with_spring_seat_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          189.20000000000002,
+          -49.999999999999964,
+          194.20000000000002
+        ],
+        [
+          194.80000000000004,
+          -37.999999999999936,
+          199.80000000000004
+        ]
+      ],
+      "volume_mm3": 132.4495462753513
+    },
+    {
+      "file": "cad_meter_013.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_preload_M3_jam_nut_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          189.20000000000002,
+          -47.99999999999994,
+          194.20000000000002
+        ],
+        [
+          194.80000000000004,
+          -45.99999999999995,
+          199.80000000000004
+        ]
+      ],
+      "volume_mm3": 33.175218421909555
+    },
+    {
+      "file": "cad_meter_014.stl",
+      "link": "head_link",
+      "part": "REF_R10_Meter_motor_M2_bolt_150.5_17.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          157.50000000000006,
+          16.50000000000013,
+          213.50000000000009
+        ],
+        [
+          159.50000000000006,
+          18.500000000000135,
+          218.0000000000001
+        ]
+      ],
+      "volume_mm3": 14.137166941153556
+    },
+    {
+      "file": "cad_meter_015.stl",
+      "link": "head_link",
+      "part": "REF_R10_Meter_motor_M2_head_150.5_17.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          156.60000000000005,
+          15.60000000000013,
+          212.00000000000003
+        ],
+        [
+          160.40000000000006,
+          19.400000000000134,
+          213.50000000000009
+        ]
+      ],
+      "volume_mm3": 17.01172421919005
+    },
+    {
+      "file": "cad_meter_016.stl",
+      "link": "head_link",
+      "part": "REF_R10_Meter_motor_M2_bolt_150.5_32.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          157.50000000000006,
+          31.500000000000146,
+          213.50000000000009
+        ],
+        [
+          159.50000000000006,
+          33.50000000000015,
+          218.0000000000001
+        ]
+      ],
+      "volume_mm3": 14.137166941153556
+    },
+    {
+      "file": "cad_meter_017.stl",
+      "link": "head_link",
+      "part": "REF_R10_Meter_motor_M2_head_150.5_32.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          156.60000000000005,
+          30.600000000000147,
+          212.00000000000003
+        ],
+        [
+          160.40000000000006,
+          34.40000000000015,
+          213.50000000000009
+        ]
+      ],
+      "volume_mm3": 17.01172421919005
+    },
+    {
+      "file": "cad_meter_018.stl",
+      "link": "head_link",
+      "part": "REF_R10_Meter_motor_M2_bolt_165.5_17.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          172.50000000000006,
+          16.50000000000013,
+          213.50000000000009
+        ],
+        [
+          174.5000000000001,
+          18.500000000000135,
+          218.0000000000001
+        ]
+      ],
+      "volume_mm3": 14.137166941153556
+    },
+    {
+      "file": "cad_meter_019.stl",
+      "link": "head_link",
+      "part": "REF_R10_Meter_motor_M2_head_165.5_17.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          171.60000000000002,
+          15.60000000000013,
+          212.00000000000003
+        ],
+        [
+          175.40000000000006,
+          19.400000000000134,
+          213.50000000000009
+        ]
+      ],
+      "volume_mm3": 17.01172421919018
+    },
+    {
+      "file": "cad_meter_020.stl",
+      "link": "head_link",
+      "part": "REF_R10_Meter_motor_M2_bolt_165.5_32.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          172.50000000000006,
+          31.50000000000015,
+          213.50000000000009
+        ],
+        [
+          174.5000000000001,
+          33.500000000000156,
+          218.0000000000001
+        ]
+      ],
+      "volume_mm3": 14.137166941153556
+    },
+    {
+      "file": "cad_meter_021.stl",
+      "link": "head_link",
+      "part": "REF_R10_Meter_motor_M2_head_165.5_32.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          171.6000000000001,
+          30.60000000000015,
+          212.00000000000003
+        ],
+        [
+          175.40000000000015,
+          34.400000000000155,
+          213.50000000000009
+        ]
+      ],
+      "volume_mm3": 17.01172421919018
+    },
+    {
+      "file": "cad_meter_022.stl",
+      "link": "head_link",
+      "part": "REF_R10_Braked_gearmotor_20x20x30_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          156.00000000000006,
+          15.000000000000128,
+          215.00000000000006
+        ],
+        [
+          176.00000000000009,
+          35.000000000000156,
+          245.00000000000006
+        ]
+      ],
+      "volume_mm3": 11939.178766226505
+    },
+    {
+      "file": "cad_meter_023.stl",
+      "link": "head_link",
+      "part": "R10_Meter_upper_inlet_clamp_and_rails",
+      "native_bounds_mm": [
+        [
+          144.0,
+          -45.99999999999995,
+          182.00000000000003
+        ],
+        [
+          240.00000000000006,
+          43.000000000000156,
+          220.00000000000006
+        ]
+      ],
+      "volume_mm3": 27776.4406234646
+    },
+    {
+      "file": "cad_meter_024.stl",
+      "link": "head_link",
+      "part": "R10_Meter_lower_inlet_clamp",
+      "native_bounds_mm": [
+        [
+          144.00000000000003,
+          -34.999999999999936,
+          150.00000000000006
+        ],
+        [
+          154.00000000000009,
+          35.00000000000015,
+          184.70000000000005
+        ]
+      ],
+      "volume_mm3": 5703.239801505287
+    },
+    {
+      "file": "cad_meter_025.stl",
+      "link": "head_link",
+      "part": "REF_R10_M3_meter_clamp_bolt_-1",
+      "native_bounds_mm": [
+        [
+          147.50000000000003,
+          -32.499999999999936,
+          178.0000000000001
+        ],
+        [
+          150.50000000000006,
+          -29.499999999999936,
+          199.00000000000006
+        ]
+      ],
+      "volume_mm3": 148.44025288211094
+    },
+    {
+      "file": "cad_meter_026.stl",
+      "link": "head_link",
+      "part": "REF_R10_M3_meter_clamp_head_-1",
+      "native_bounds_mm": [
+        [
+          146.0,
+          -33.999999999999936,
+          199.00000000000006
+        ],
+        [
+          152.00000000000006,
+          -27.999999999999932,
+          202.00000000000003
+        ]
+      ],
+      "volume_mm3": 84.82300164692731
+    },
+    {
+      "file": "cad_meter_027.stl",
+      "link": "head_link",
+      "part": "REF_R10_M3_meter_clamp_nut_-1_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          146.0,
+          -33.999999999999936,
+          175.60000000000002
+        ],
+        [
+          152.00000000000006,
+          -27.999999999999932,
+          178.00000000000006
+        ]
+      ],
+      "volume_mm3": 48.55645605388636
+    },
+    {
+      "file": "cad_meter_028.stl",
+      "link": "head_link",
+      "part": "REF_R10_M3_meter_clamp_bolt_1",
+      "native_bounds_mm": [
+        [
+          147.50000000000006,
+          29.50000000000015,
+          178.0000000000001
+        ],
+        [
+          150.50000000000009,
+          32.50000000000015,
+          199.00000000000006
+        ]
+      ],
+      "volume_mm3": 148.44025288211094
+    },
+    {
+      "file": "cad_meter_029.stl",
+      "link": "head_link",
+      "part": "REF_R10_M3_meter_clamp_head_1",
+      "native_bounds_mm": [
+        [
+          146.00000000000006,
+          28.000000000000146,
+          199.00000000000006
+        ],
+        [
+          152.0000000000001,
+          34.00000000000015,
+          202.00000000000003
+        ]
+      ],
+      "volume_mm3": 84.82300164692731
+    },
+    {
+      "file": "cad_meter_030.stl",
+      "link": "head_link",
+      "part": "REF_R10_M3_meter_clamp_nut_1_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          146.00000000000006,
+          28.000000000000146,
+          175.60000000000002
+        ],
+        [
+          152.0000000000001,
+          34.00000000000015,
+          178.0000000000001
+        ]
+      ],
+      "volume_mm3": 48.55645605388636
+    },
+    {
+      "file": "cad_meter_031.stl",
+      "link": "head_link",
+      "part": "REF_R10_Idler_spring_ENVELOPE_FORCE_UNSELECTED",
+      "native_bounds_mm": [
+        [
+          189.50000000000003,
+          -39.99999999999994,
+          194.50000000000003
+        ],
+        [
+          194.50000000000003,
+          -29.99999999999993,
+          199.50000000000003
+        ]
+      ],
+      "volume_mm3": 70.68583470577333
+    },
+    {
+      "file": "cad_meter_032.stl",
+      "link": "head_link",
+      "part": "REF_R10_108mm_GT2_belt_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          159.03380227632425,
+          18.033802276324323,
+          206.00000000000009
+        ],
+        [
+          198.96619772367586,
+          31.96619772367597,
+          211.00000000000009
+        ]
+      ],
+      "volume_mm3": 551.9999999999992
+    },
+    {
+      "file": "cad_meter_033.stl",
+      "link": "head_meter_roller_link",
+      "part": "REF_R10_Driven_3mm_D_shaft",
+      "native_bounds_mm": [
+        [
+          190.5000000000001,
+          23.50000000000007,
+          182.00000000000003
+        ],
+        [
+          193.20000000000016,
+          26.500000000000075,
+          214.00000000000003
+        ]
+      ],
+      "volume_mm3": 214.4225912253491
+    },
+    {
+      "file": "cad_meter_034.stl",
+      "link": "head_meter_roller_link",
+      "part": "R10_Meter_keyed_roller_core_1",
+      "native_bounds_mm": [
+        [
+          187.20000000000013,
+          20.200000000000067,
+          183.0000000000001
+        ],
+        [
+          196.80000000000013,
+          29.800000000000075,
+          189.00000000000006
+        ]
+      ],
+      "volume_mm3": 306.9133876031883
+    },
+    {
+      "file": "cad_meter_035.stl",
+      "link": "head_meter_roller_link",
+      "part": "REF_R10_Compliant_keyed_meter_tire_1_12x6_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          186.00000000000009,
+          19.00000000000006,
+          183.00000000000014
+        ],
+        [
+          198.00000000000014,
+          31.00000000000008,
+          189.00000000000006
+        ]
+      ],
+      "volume_mm3": 328.6306419929815
+    },
+    {
+      "file": "cad_meter_036.stl",
+      "link": "head_meter_roller_link",
+      "part": "REF_R10_20T_GT2_D_bore_pulley_192_NO_TEETH",
+      "native_bounds_mm": [
+        [
+          185.0000000000001,
+          18.000000000000064,
+          205.00000000000003
+        ],
+        [
+          199.0000000000001,
+          32.000000000000085,
+          212.0
+        ]
+      ],
+      "volume_mm3": 705.4496747554566
+    },
+    {
+      "file": "cad_meter_037.stl",
+      "link": "head_meter_roller_link",
+      "part": "REF_R10_Meter_lower_collar_25_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          189.5000000000001,
+          22.50000000000007,
+          182.00000000000006
+        ],
+        [
+          194.50000000000014,
+          27.500000000000075,
+          183.00000000000009
+        ]
+      ],
+      "volume_mm3": 12.087277734687298
+    },
+    {
+      "file": "cad_meter_038.stl",
+      "link": "head_meter_roller_link",
+      "part": "REF_R10_Meter_lower_spacer_25_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          189.5000000000001,
+          22.50000000000007,
+          189.00000000000006
+        ],
+        [
+          194.50000000000014,
+          27.500000000000075,
+          194.00000000000006
+        ]
+      ],
+      "volume_mm3": 60.43638867343104
+    },
+    {
+      "file": "cad_meter_039.stl",
+      "link": "head_meter_roller_link",
+      "part": "REF_R10_Meter_upper_spacer_25_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          189.5000000000001,
+          22.50000000000007,
+          200.00000000000006
+        ],
+        [
+          194.50000000000014,
+          27.500000000000075,
+          205.00000000000003
+        ]
+      ],
+      "volume_mm3": 60.43638867343104
+    },
+    {
+      "file": "cad_meter_040.stl",
+      "link": "head_meter_roller_link",
+      "part": "REF_R10_Meter_upper_collar_25_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          189.5000000000001,
+          22.50000000000007,
+          212.0
+        ],
+        [
+          194.50000000000014,
+          27.500000000000075,
+          214.00000000000003
+        ]
+      ],
+      "volume_mm3": 24.174555469374596
+    },
+    {
+      "file": "cad_meter_041.stl",
+      "link": "head_meter_idler_carriage_link",
+      "part": "R10_Meter_spring_idler_carriage",
+      "native_bounds_mm": [
+        [
+          184.00000000000003,
+          -31.999999999999943,
+          194.00000000000009
+        ],
+        [
+          200.00000000000003,
+          -21.99999999999993,
+          200.0000000000001
+        ]
+      ],
+      "volume_mm3": 456.6242264516924
+    },
+    {
+      "file": "cad_meter_042.stl",
+      "link": "head_meter_idler_carriage_link",
+      "part": "REF_R10_Idler_3x6x2p5_bearing_194_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          189.00000000000003,
+          -27.999999999999932,
+          194.00000000000009
+        ],
+        [
+          195.00000000000003,
+          -21.99999999999993,
+          196.50000000000009
+        ]
+      ],
+      "volume_mm3": 53.014376029330336
+    },
+    {
+      "file": "cad_meter_043.stl",
+      "link": "head_meter_idler_carriage_link",
+      "part": "REF_R10_Idler_3x6x2p5_bearing_197.5_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          189.00000000000003,
+          -27.999999999999932,
+          197.5000000000001
+        ],
+        [
+          195.00000000000003,
+          -21.99999999999993,
+          200.0000000000001
+        ]
+      ],
+      "volume_mm3": 53.014376029330336
+    },
+    {
+      "file": "cad_meter_044.stl",
+      "link": "head_meter_idler_link",
+      "part": "REF_R10_Idler_3mm_shaft",
+      "native_bounds_mm": [
+        [
+          190.49999999999994,
+          -26.50000000000002,
+          181.9999999999999
+        ],
+        [
+          193.49999999999994,
+          -23.500000000000018,
+          205.99999999999991
+        ]
+      ],
+      "volume_mm3": 169.64600329384194
+    },
+    {
+      "file": "cad_meter_045.stl",
+      "link": "head_meter_idler_link",
+      "part": "R10_Meter_keyed_roller_core_-1",
+      "native_bounds_mm": [
+        [
+          187.19999999999996,
+          -29.800000000000022,
+          182.99999999999997
+        ],
+        [
+          196.79999999999995,
+          -20.200000000000014,
+          188.99999999999991
+        ]
+      ],
+      "volume_mm3": 307.54187035897354
+    },
+    {
+      "file": "cad_meter_046.stl",
+      "link": "head_meter_idler_link",
+      "part": "REF_R10_Compliant_keyed_meter_tire_-1_12x6_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          185.99999999999991,
+          -31.00000000000003,
+          183.0
+        ],
+        [
+          197.99999999999997,
+          -19.00000000000001,
+          188.99999999999991
+        ]
+      ],
+      "volume_mm3": 328.6306419929815
+    },
+    {
+      "file": "cad_meter_047.stl",
+      "link": "head_meter_idler_link",
+      "part": "REF_R10_Meter_lower_collar_-25_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          189.49999999999991,
+          -27.50000000000002,
+          181.99999999999991
+        ],
+        [
+          194.49999999999994,
+          -22.500000000000018,
+          182.99999999999994
+        ]
+      ],
+      "volume_mm3": 12.087277734687298
+    },
+    {
+      "file": "cad_meter_048.stl",
+      "link": "head_meter_idler_link",
+      "part": "REF_R10_Meter_lower_spacer_-25_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          189.49999999999991,
+          -27.50000000000002,
+          188.99999999999991
+        ],
+        [
+          194.49999999999994,
+          -22.500000000000018,
+          193.99999999999991
+        ]
+      ],
+      "volume_mm3": 60.43638867343104
+    },
+    {
+      "file": "cad_meter_049.stl",
+      "link": "head_meter_idler_link",
+      "part": "REF_R10_Meter_upper_spacer_-25_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          190.0999999999999,
+          -26.90000000000002,
+          199.99999999999994
+        ],
+        [
+          193.89999999999998,
+          -23.10000000000002,
+          203.9999999999999
+        ]
+      ],
+      "volume_mm3": 15.173892516838
+    },
+    {
+      "file": "cad_meter_050.stl",
+      "link": "head_meter_idler_link",
+      "part": "REF_R10_Meter_upper_collar_-25_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          189.49999999999991,
+          -27.50000000000002,
+          203.9999999999999
+        ],
+        [
+          194.49999999999994,
+          -22.500000000000018,
+          205.99999999999991
+        ]
+      ],
+      "volume_mm3": 24.174555469374596
+    },
+    {
+      "file": "cad_meter_051.stl",
+      "link": "head_meter_motor_link",
+      "part": "REF_R10_20T_GT2_D_bore_pulley_158_NO_TEETH",
+      "native_bounds_mm": [
+        [
+          159.00000000000014,
+          18.000000000000135,
+          205.00000000000014
+        ],
+        [
+          173.00000000000017,
+          32.000000000000156,
+          212.0000000000001
+        ]
+      ],
+      "volume_mm3": 666.1699491275333
+    },
+    {
+      "file": "cad_meter_052.stl",
+      "link": "head_meter_motor_link",
+      "part": "REF_R10_Meter_motor_shaft_4mm_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          164.0000000000001,
+          23.000000000000142,
+          205.5000000000001
+        ],
+        [
+          167.50000000000014,
+          27.00000000000015,
+          215.00000000000014
+        ]
+      ],
+      "volume_mm3": 110.76759751083752
+    },
+    {
+      "file": "cad_meter_053.stl",
+      "link": "drain_cover_link",
+      "part": "R10_Lower_bend_removable_drain_cover",
+      "native_bounds_mm": [
+        [
+          -30.0,
+          -154.8,
+          -82.00000000000001
+        ],
+        [
+          69.0,
+          -120.8,
+          -7.999999999999998
+        ]
+      ],
+      "volume_mm3": 28798.90679652141
+    },
+    {
+      "file": "cad_meter_054.stl",
+      "link": "drain_cover_link",
+      "part": "REF_R10_Drain_M3x12_bolt_-20_-76_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          -22.799999999999997,
+          -127.79999999999998,
+          -78.8
+        ],
+        [
+          -17.2,
+          -112.79999999999998,
+          -73.19999999999999
+        ]
+      ],
+      "volume_mm3": 158.71326085936266
+    },
+    {
+      "file": "cad_meter_055.stl",
+      "link": "drain_cover_link",
+      "part": "REF_R10_Drain_M3_nut_-20_-76_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          -23.0,
+          -116.8,
+          -79.0
+        ],
+        [
+          -17.0,
+          -114.4,
+          -73.0
+        ]
+      ],
+      "volume_mm3": 48.55645605388559
+    },
+    {
+      "file": "cad_meter_056.stl",
+      "link": "drain_cover_link",
+      "part": "REF_R10_Drain_M3x12_bolt_10_-76_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          7.199999999999999,
+          -127.79999999999998,
+          -78.8
+        ],
+        [
+          12.8,
+          -112.79999999999998,
+          -73.19999999999999
+        ]
+      ],
+      "volume_mm3": 158.7132608593627
+    },
+    {
+      "file": "cad_meter_057.stl",
+      "link": "drain_cover_link",
+      "part": "REF_R10_Drain_M3_nut_10_-76_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          7.0,
+          -116.8,
+          -79.0
+        ],
+        [
+          13.0,
+          -114.4,
+          -73.0
+        ]
+      ],
+      "volume_mm3": 48.556456053885604
+    },
+    {
+      "file": "cad_meter_058.stl",
+      "link": "drain_cover_link",
+      "part": "REF_R10_Drain_M3x12_bolt_65_-50_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          62.199999999999996,
+          -127.79999999999998,
+          -52.800000000000004
+        ],
+        [
+          67.8,
+          -112.79999999999998,
+          -47.199999999999996
+        ]
+      ],
+      "volume_mm3": 158.71326085936272
+    },
+    {
+      "file": "cad_meter_059.stl",
+      "link": "drain_cover_link",
+      "part": "REF_R10_Drain_M3_nut_65_-50_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          62.0,
+          -116.8,
+          -53.0
+        ],
+        [
+          68.0,
+          -114.4,
+          -47.0
+        ]
+      ],
+      "volume_mm3": 48.5564560538856
+    },
+    {
+      "file": "cad_meter_060.stl",
+      "link": "drain_cover_link",
+      "part": "REF_R10_Drain_M3x12_bolt_65_-15_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          62.199999999999996,
+          -127.79999999999998,
+          -17.8
+        ],
+        [
+          67.8,
+          -112.79999999999998,
+          -12.2
+        ]
+      ],
+      "volume_mm3": 158.71326085936263
+    },
+    {
+      "file": "cad_meter_061.stl",
+      "link": "drain_cover_link",
+      "part": "REF_R10_Drain_M3_nut_65_-15_ENVELOPE",
+      "native_bounds_mm": [
+        [
+          62.0,
+          -116.8,
+          -18.0
+        ],
+        [
+          68.0,
+          -114.4,
+          -12.0
+        ]
+      ],
+      "volume_mm3": 48.5564560538856
+    },
+    {
+      "file": "cad_meter_062.stl",
+      "link": "drain_service_panel_link",
+      "part": "R10_Removable_drain_service_side_panel",
+      "native_bounds_mm": [
+        [
+          -52.0,
+          -178.29999999999998,
+          -99.0
+        ],
+        [
+          91.00000000000001,
+          -175.3,
+          -4.0000000000000036
+        ]
+      ],
+      "volume_mm3": 40646.04956677313
+    },
+    {
+      "file": "cad_meter_063.stl",
+      "link": "drain_service_panel_link",
+      "part": "REF_R10_Service_panel_M3_screw_-46_-20_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          -48.69999999999999,
+          -180.3,
+          -22.7
+        ],
+        [
+          -43.3,
+          -171.3,
+          -17.3
+        ]
+      ],
+      "volume_mm3": 80.16559053798179
+    },
+    {
+      "file": "cad_meter_064.stl",
+      "link": "drain_service_panel_link",
+      "part": "REF_R10_Service_panel_M3_screw_-46_-85_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          -48.69999999999999,
+          -180.3,
+          -87.69999999999999
+        ],
+        [
+          -43.3,
+          -171.3,
+          -82.30000000000001
+        ]
+      ],
+      "volume_mm3": 80.16559053798179
+    },
+    {
+      "file": "cad_meter_065.stl",
+      "link": "drain_service_panel_link",
+      "part": "REF_R10_Service_panel_M3_screw_85_-20_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          82.30000000000001,
+          -180.3,
+          -22.7
+        ],
+        [
+          87.69999999999999,
+          -171.3,
+          -17.3
+        ]
+      ],
+      "volume_mm3": 80.16559053798179
+    },
+    {
+      "file": "cad_meter_066.stl",
+      "link": "drain_service_panel_link",
+      "part": "REF_R10_Service_panel_M3_screw_85_-85_ESTIMATE",
+      "native_bounds_mm": [
+        [
+          82.30000000000001,
+          -180.3,
+          -87.69999999999999
+        ],
+        [
+          87.69999999999999,
+          -171.3,
+          -82.30000000000001
+        ]
+      ],
+      "volume_mm3": 80.16559053798179
+    },
+    {
+      "file": "cad_meter_067.stl",
+      "link": "base_link",
+      "part": "R1010_Fixed_R60_lower_bend_and_riser",
+      "native_bounds_mm": [
+        [
+          -30.0,
+          -146.8,
+          -82.00000000000001
+        ],
+        [
+          69.0,
+          -86.8,
+          124.20000000000003
+        ]
+      ],
+      "volume_mm3": 90097.58020625764
+    }
+  ]
+}

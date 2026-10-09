@@ -1,0 +1,25 @@
+Loading plugin library file [/usr/lib/aarch64-linux-gnu/ign-physics-5/engine-plugins/libignition-physics5-bullet-plugin.so.5.4.0]
+* Found 1 plugin in library file:
+  - ignition::physics::bullet::Plugin
+* Found 21 interfaces in library file:
+  - ignition::physics::sdf::ConstructSdfWorld::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::sdf::ConstructSdfCollision::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::mesh::MeshShapeCast::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::sdf::ConstructSdfModel::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::SetJointVelocityCommandFeature::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::ConstructEmptyWorldFeature::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::sdf::ConstructSdfLink::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::SetFreeGroupWorldPose::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::Feature::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::FindFreeGroupFeature::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::ForwardStep::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::GetBasicJointProperties::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::RevoluteJointCast::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::FixedJointCast::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::FrameSemantics::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::GetBasicJointState::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::mesh::AttachMeshShapeFeature::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::GetRevoluteJointProperties::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::sdf::ConstructSdfJoint::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::RemoveModelFromWorld::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >
+  - ignition::physics::SetBasicJointState::Implementation<ignition::physics::FeaturePolicy<double, 3ul> >

@@ -1,0 +1,10 @@
+{
+  "docker desktop status": {
+    "error": "No response within 12 seconds"
+  },
+  "docker desktop --help": {
+    "returncode": 0,
+    "stdout": "Usage:  docker desktop COMMAND\n\nThe Docker Desktop CLI lets you perform key operations such as starting, stopping,\nrestarting, and updating Docker Desktop directly from the command line.\n\nManagement Commands:\n  disable      Disable a feature\n  enable       Enable a feature\n  kubernetes   Manage Kubernetes\n\nCommands:\n  diagnose     Diagnose Docker Desktop\n  logs         Print log entries\n  restart      Restart Docker Desktop\n  start        Start Docker Desktop\n  status       Show the status of the Docker Desktop engines\n  stop         Stop Docker Desktop\n  update       Manage Docker Desktop updates\n  version      Show the Docker Desktop CLI plugin version information\n\nRun 'docker desktop COMMAND --help' for more information on a command.\n",
+    "stderr": ""
+  }
+}

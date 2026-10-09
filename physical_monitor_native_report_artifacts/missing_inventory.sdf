@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.8">
+  <world name="monitor_missing_inventory">
+    <gravity>0 0 -9.81</gravity>
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin filename="ignition-gazebo-physics-system" name="ignition::gazebo::systems::Physics" />
+    <plugin filename="ignition-gazebo-user-commands-system" name="ignition::gazebo::systems::UserCommands" />
+    <model name="monitor_fixture">
+      <static>true</static>
+      <pose>0.0 0 0.1 0 0 0</pose>
+      <link name="head_link">
+        <inertial>
+          <mass>0.02</mass>
+          <inertia>
+            <ixx>2.0000000000000002e-07</ixx>
+            <iyy>2.0000000000000002e-07</iyy>
+            <izz>2.0000000000000002e-07</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="sphere_collision">
+          <pose>0.15 0 0 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.005</radius>
+            </sphere>
+          </geometry>
+        </collision>
+      </link>
+      <plugin filename="libpingpong_physical_ball_monitor.so" name="pingpong::PhysicalBallMonitor">
+        <head_link>head_link</head_link>
+        <muzzle_pose>0 0 0 0 1.5707963267948966 0</muzzle_pose>
+        <aperture_radius>0.025</aperture_radius>
+        <expected_ball_count>1</expected_ball_count>
+        <publish_rate>200</publish_rate>
+        <min_forward_speed>0.01</min_forward_speed>
+        <ball_name_prefix>inventory_ball_</ball_name_prefix>
+        <ball_link>ball_link</ball_link>
+      </plugin>
+    </model>
+  </world>
+</sdf>

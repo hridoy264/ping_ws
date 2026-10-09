@@ -1,0 +1,404 @@
+{
+  "scope": "Unloaded full mechanism; no balls in this diagnostic; canonical world still contains100.",
+  "pass": true,
+  "phases": [
+    {
+      "sim_time": 0.8730000000000001,
+      "model_position": [
+        0.0,
+        0.0,
+        0.91
+      ],
+      "model_orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "joints": {
+        "yaw_joint": {
+          "entity": 692,
+          "position": -5.507094533642266e-24,
+          "velocity": -3.3881317890172014e-21
+        },
+        "pitch_joint": {
+          "entity": 693,
+          "position": -4.813802411721248e-14,
+          "velocity": 0.0
+        },
+        "feeder_joint": {
+          "entity": 694,
+          "position": 0.0,
+          "velocity": 0.0
+        },
+        "wheel_1_joint": {
+          "entity": 695,
+          "position": -5.689893001219622e-18,
+          "velocity": -6.938893903907228e-18
+        },
+        "wheel_2_joint": {
+          "entity": 696,
+          "position": 2.775557562130309e-20,
+          "velocity": 0.0
+        },
+        "wheel_3_joint": {
+          "entity": 697,
+          "position": -2.83453815973412e-18,
+          "velocity": -3.469446951953614e-18
+        },
+        "head_meter_roller_joint": {
+          "entity": 698,
+          "position": 0.03999999999800001,
+          "velocity": 2.0
+        },
+        "head_meter_motor_joint": {
+          "entity": 699,
+          "position": 0.03999999999800002,
+          "velocity": 2.0
+        },
+        "head_meter_idler_joint": {
+          "entity": 700,
+          "position": 1.7038766773357158e-15,
+          "velocity": 1.957676100221295e-15
+        },
+        "head_meter_idler_slide": {
+          "entity": 701,
+          "position": -1.4095573140271987e-11,
+          "velocity": -3.635465409615457e-18
+        }
+      }
+    },
+    {
+      "sim_time": 1.679,
+      "model_position": [
+        0.0,
+        0.0,
+        0.91
+      ],
+      "model_orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "joints": {
+        "yaw_joint": {
+          "entity": 692,
+          "position": -5.507094533642266e-24,
+          "velocity": -6.776263578034403e-21
+        },
+        "pitch_joint": {
+          "entity": 693,
+          "position": -4.813802411721248e-14,
+          "velocity": 0.0
+        },
+        "feeder_joint": {
+          "entity": 694,
+          "position": 0.0,
+          "velocity": 0.0
+        },
+        "wheel_1_joint": {
+          "entity": 695,
+          "position": -1.128264148776837e-17,
+          "velocity": -6.938893903907228e-18
+        },
+        "wheel_2_joint": {
+          "entity": 696,
+          "position": 2.775557562130309e-20,
+          "velocity": 0.0
+        },
+        "wheel_3_joint": {
+          "entity": 697,
+          "position": -5.6309124030084954e-18,
+          "velocity": -3.469446951953614e-18
+        },
+        "head_meter_roller_joint": {
+          "entity": 698,
+          "position": 1.6519999999980013,
+          "velocity": 2.0
+        },
+        "head_meter_motor_joint": {
+          "entity": 699,
+          "position": 1.6519999999980013,
+          "velocity": 2.0
+        },
+        "head_meter_idler_joint": {
+          "entity": 700,
+          "position": 3.28252832562326e-15,
+          "velocity": 1.959224476448876e-15
+        },
+        "head_meter_idler_slide": {
+          "entity": 701,
+          "position": -1.4095576070675852e-11,
+          "velocity": -3.635888926089084e-18
+        }
+      }
+    },
+    {
+      "sim_time": 4.285,
+      "model_position": [
+        0.0,
+        0.0,
+        0.91
+      ],
+      "model_orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "joints": {
+        "yaw_joint": {
+          "entity": 692,
+          "position": 0.15,
+          "velocity": 5.204170427930421e-18
+        },
+        "pitch_joint": {
+          "entity": 693,
+          "position": 0.099999999999952,
+          "velocity": -2.067790383364354e-15
+        },
+        "feeder_joint": {
+          "entity": 694,
+          "position": 0.0,
+          "velocity": 0.0
+        },
+        "wheel_1_joint": {
+          "entity": 695,
+          "position": -1.0172418463403534e-17,
+          "velocity": 0.0
+        },
+        "wheel_2_joint": {
+          "entity": 696,
+          "position": 3.965577861495594e-18,
+          "velocity": 0.0
+        },
+        "wheel_3_joint": {
+          "entity": 697,
+          "position": -9.950373854226437e-18,
+          "velocity": -3.469446951953614e-18
+        },
+        "head_meter_roller_joint": {
+          "entity": 698,
+          "position": 3.532000000001868,
+          "velocity": -2.0
+        },
+        "head_meter_motor_joint": {
+          "entity": 699,
+          "position": 3.532000000001868,
+          "velocity": -2.0
+        },
+        "head_meter_idler_joint": {
+          "entity": 700,
+          "position": 0.15000000000000555,
+          "velocity": 2.3895815881580518e-15
+        },
+        "head_meter_idler_slide": {
+          "entity": 701,
+          "position": 0.0013816336287547336,
+          "velocity": -0.00018354124079273366
+        }
+      }
+    },
+    {
+      "sim_time": 5.139,
+      "model_position": [
+        0.0,
+        0.0,
+        0.91
+      ],
+      "model_orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "joints": {
+        "yaw_joint": {
+          "entity": 692,
+          "position": 0.15,
+          "velocity": 1.734723475976807e-18
+        },
+        "pitch_joint": {
+          "entity": 693,
+          "position": 0.099999999999952,
+          "velocity": -2.067790383364354e-15
+        },
+        "feeder_joint": {
+          "entity": 694,
+          "position": 0.0,
+          "velocity": 0.0
+        },
+        "wheel_1_joint": {
+          "entity": 695,
+          "position": -9.74220704136131e-18,
+          "velocity": 0.0
+        },
+        "wheel_2_joint": {
+          "entity": 696,
+          "position": 3.882311134648708e-18,
+          "velocity": 0.0
+        },
+        "wheel_3_joint": {
+          "entity": 697,
+          "position": -1.0047518368881128e-17,
+          "velocity": 3.469446951953614e-18
+        },
+        "head_meter_roller_joint": {
+          "entity": 698,
+          "position": 1.8300000000000365,
+          "velocity": -2.168404344971009e-19
+        },
+        "head_meter_motor_joint": {
+          "entity": 699,
+          "position": 1.8300000000000365,
+          "velocity": 2.168404344971009e-19
+        },
+        "head_meter_idler_joint": {
+          "entity": 700,
+          "position": 0.15000000000000555,
+          "velocity": 2.3798237686056822e-15
+        },
+        "head_meter_idler_slide": {
+          "entity": 701,
+          "position": 0.0011916394237066845,
+          "velocity": -0.00024977449466533823
+        }
+      }
+    }
+  ],
+  "reverse_acknowledged": {
+    "sim_time": 3.47,
+    "model_position": [
+      0.0,
+      0.0,
+      0.91
+    ],
+    "model_orientation": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "joints": {
+      "yaw_joint": {
+        "entity": 692,
+        "position": 0.15,
+        "velocity": 1.5395670849294163e-17
+      },
+      "pitch_joint": {
+        "entity": 693,
+        "position": 0.099999999999952,
+        "velocity": -2.0539125955565396e-15
+      },
+      "feeder_joint": {
+        "entity": 694,
+        "position": 0.0,
+        "velocity": 0.0
+      },
+      "wheel_1_joint": {
+        "entity": 695,
+        "position": -1.0547118734214495e-17,
+        "velocity": 0.0
+      },
+      "wheel_2_joint": {
+        "entity": 696,
+        "position": 4.01068067187099e-18,
+        "velocity": -3.469446951953614e-18
+      },
+      "wheel_3_joint": {
+        "entity": 697,
+        "position": -9.825473763956121e-18,
+        "velocity": 0.0
+      },
+      "head_meter_roller_joint": {
+        "entity": 698,
+        "position": 5.162000000001688,
+        "velocity": -2.0
+      },
+      "head_meter_motor_joint": {
+        "entity": 699,
+        "position": 5.162000000001688,
+        "velocity": -2.0
+      },
+      "head_meter_idler_joint": {
+        "entity": 700,
+        "position": 0.15000000000000555,
+        "velocity": 2.4036762164003633e-15
+      },
+      "head_meter_idler_slide": {
+        "entity": 701,
+        "position": 0.0014706978115483203,
+        "velocity": -5.021371425647202e-06
+      }
+    }
+  },
+  "feeding_pass": false,
+  "sample_count": 254,
+  "last": {
+    "sim_time": 5.139,
+    "model_position": [
+      0.0,
+      0.0,
+      0.91
+    ],
+    "model_orientation": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "joints": {
+      "yaw_joint": {
+        "entity": 692,
+        "position": 0.15,
+        "velocity": 1.734723475976807e-18
+      },
+      "pitch_joint": {
+        "entity": 693,
+        "position": 0.099999999999952,
+        "velocity": -2.067790383364354e-15
+      },
+      "feeder_joint": {
+        "entity": 694,
+        "position": 0.0,
+        "velocity": 0.0
+      },
+      "wheel_1_joint": {
+        "entity": 695,
+        "position": -9.74220704136131e-18,
+        "velocity": 0.0
+      },
+      "wheel_2_joint": {
+        "entity": 696,
+        "position": 3.882311134648708e-18,
+        "velocity": 0.0
+      },
+      "wheel_3_joint": {
+        "entity": 697,
+        "position": -1.0047518368881128e-17,
+        "velocity": 3.469446951953614e-18
+      },
+      "head_meter_roller_joint": {
+        "entity": 698,
+        "position": 1.8300000000000365,
+        "velocity": -2.168404344971009e-19
+      },
+      "head_meter_motor_joint": {
+        "entity": 699,
+        "position": 1.8300000000000365,
+        "velocity": 2.168404344971009e-19
+      },
+      "head_meter_idler_joint": {
+        "entity": 700,
+        "position": 0.15000000000000555,
+        "velocity": 2.3798237686056822e-15
+      },
+      "head_meter_idler_slide": {
+        "entity": 701,
+        "position": 0.0011916394237066845,
+        "velocity": -0.00024977449466533823
+      }
+    }
+  }
+}

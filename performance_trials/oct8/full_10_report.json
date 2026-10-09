@@ -1,0 +1,264 @@
+{
+  "test": "physical_inventory_smoke",
+  "schema_version": 1,
+  "inventory_pass": true,
+  "feeding_pass": false,
+  "passed": true,
+  "feeding_test_requested": false,
+  "expected_count": 10,
+  "expected_ids": [
+    "inventory_ball_001",
+    "inventory_ball_002",
+    "inventory_ball_003",
+    "inventory_ball_004",
+    "inventory_ball_005",
+    "inventory_ball_006",
+    "inventory_ball_007",
+    "inventory_ball_008",
+    "inventory_ball_009",
+    "inventory_ball_010"
+  ],
+  "measured_snapshots": 11,
+  "incomplete_startup_snapshots": 0,
+  "sim_start": 0.001,
+  "sim_end": 2.006,
+  "sim_duration": 2.005,
+  "minimum_requested_new_shots": 0,
+  "initial_physical_shot_count": 0,
+  "final_physical_shot_count": 0,
+  "new_crossing_count": 0,
+  "new_crossing_ids": [],
+  "world_position_min": [
+    -0.23502820287953122,
+    -0.1422849935468664,
+    1.001762221686554
+  ],
+  "world_position_max": [
+    -0.1501256721566759,
+    -0.012824747764760565,
+    1.1433736815510998
+  ],
+  "initial_positions": {
+    "inventory_ball_001": [
+      -0.23351634392092527,
+      -0.1422849935468664,
+      1.1430552075910216
+    ],
+    "inventory_ball_002": [
+      -0.1921660735571107,
+      -0.1418581172715016,
+      1.143296209692454
+    ],
+    "inventory_ball_003": [
+      -0.15016469225937706,
+      -0.14224783670042238,
+      1.1431433430918112
+    ],
+    "inventory_ball_004": [
+      -0.23388212166833716,
+      -0.10056881721511786,
+      1.143193403172862
+    ],
+    "inventory_ball_005": [
+      -0.19228407841818967,
+      -0.10058069740958803,
+      1.1432801206626677
+    ],
+    "inventory_ball_006": [
+      -0.15037303511163805,
+      -0.1005677356267756,
+      1.1432437494103256
+    ],
+    "inventory_ball_007": [
+      -0.23341434172599332,
+      -0.05909610074419317,
+      1.1433736815510998
+    ],
+    "inventory_ball_008": [
+      -0.19188111636300706,
+      -0.05889584969008921,
+      1.1429834776998873
+    ],
+    "inventory_ball_009": [
+      -0.1501256721566759,
+      -0.05889804327293243,
+      1.1429458375060282
+    ],
+    "inventory_ball_010": [
+      -0.23384197017389993,
+      -0.01699150338019152,
+      1.1432524256188203
+    ]
+  },
+  "final_positions": {
+    "inventory_ball_001": [
+      -0.22477989958061156,
+      -0.10398689683365185,
+      1.0547899370271645
+    ],
+    "inventory_ball_002": [
+      -0.17140906078739787,
+      -0.08654408352120203,
+      1.0247378628830122
+    ],
+    "inventory_ball_003": [
+      -0.15816855886202813,
+      -0.10549168536947161,
+      1.0573825478248347
+    ],
+    "inventory_ball_004": [
+      -0.21957913926759845,
+      -0.06645649575701268,
+      1.0419673925529693
+    ],
+    "inventory_ball_005": [
+      -0.2049406439843966,
+      -0.0755962220302333,
+      1.0058758722118626
+    ],
+    "inventory_ball_006": [
+      -0.16564233420299387,
+      -0.049603724370512144,
+      1.0389558136242008
+    ],
+    "inventory_ball_007": [
+      -0.22532946101230245,
+      -0.012826665684012799,
+      1.0561449108561436
+    ],
+    "inventory_ball_008": [
+      -0.18053429775430227,
+      -0.04411445537379861,
+      1.0022393730914698
+    ],
+    "inventory_ball_009": [
+      -0.18573348861013794,
+      -0.016669585078618952,
+      1.0495239565661254
+    ],
+    "inventory_ball_010": [
+      -0.21208898021889008,
+      -0.031774260994564346,
+      1.0235002167742382
+    ]
+  },
+  "reset_epoch": 0,
+  "persistent_entity_ids": {
+    "inventory_ball_001": [
+      20,
+      21
+    ],
+    "inventory_ball_002": [
+      24,
+      25
+    ],
+    "inventory_ball_003": [
+      28,
+      29
+    ],
+    "inventory_ball_004": [
+      32,
+      33
+    ],
+    "inventory_ball_005": [
+      36,
+      37
+    ],
+    "inventory_ball_006": [
+      40,
+      41
+    ],
+    "inventory_ball_007": [
+      44,
+      45
+    ],
+    "inventory_ball_008": [
+      48,
+      49
+    ],
+    "inventory_ball_009": [
+      52,
+      53
+    ],
+    "inventory_ball_010": [
+      56,
+      57
+    ]
+  },
+  "sampled_pair_clearance_pass": true,
+  "sampled_minimum_pair_spacing_m": 0.039963125766377325,
+  "sampled_closest_pair": [
+    "inventory_ball_004",
+    "inventory_ball_010"
+  ],
+  "sampled_maximum_pair_penetration_m": 3.6874233622676e-05,
+  "maximum_permitted_pair_penetration_m": 0.001,
+  "final_containment_pass": true,
+  "final_outside_containment_ids": [],
+  "containment_world_bounds": [
+    -0.272,
+    -0.1638,
+    0.84,
+    -0.112,
+    0.0462,
+    1.258
+  ],
+  "final_max_sample_displacement_speed_mps": 4.1438308946392324e-07,
+  "error": null,
+  "scope": "Observed inventory identities and muzzle crossings only; no contact calibration or hardware performance claim.",
+  "wall_duration": 4.275399585999992,
+  "topic": "/pingpong/physical_ball_inventory",
+  "transport_partition": "physical-inventory-68-1791449386",
+  "world": "/ws/performance_trials/oct8/full_10.sdf",
+  "attached": false,
+  "diagnostics": [],
+  "requested_sim_duration": 2.0,
+  "performance_samples": [
+    {
+      "sim_time": 0.001,
+      "wall_since_start_s": 2.135363209999994
+    },
+    {
+      "sim_time": 0.201,
+      "wall_since_start_s": 2.3362150009999993
+    },
+    {
+      "sim_time": 0.401,
+      "wall_since_start_s": 2.5357637929999868
+    },
+    {
+      "sim_time": 0.602,
+      "wall_since_start_s": 2.7368695429999974
+    },
+    {
+      "sim_time": 0.802,
+      "wall_since_start_s": 2.9369278349999917
+    },
+    {
+      "sim_time": 1.003,
+      "wall_since_start_s": 3.1378587519999996
+    },
+    {
+      "sim_time": 1.203,
+      "wall_since_start_s": 3.3379035439999996
+    },
+    {
+      "sim_time": 1.404,
+      "wall_since_start_s": 3.5445279189999894
+    },
+    {
+      "sim_time": 1.604,
+      "wall_since_start_s": 3.7515204599999947
+    },
+    {
+      "sim_time": 1.805,
+      "wall_since_start_s": 3.9538602109999914
+    },
+    {
+      "sim_time": 2.006,
+      "wall_since_start_s": 4.1579513359999964
+    }
+  ],
+  "startup_to_first_snapshot_wall_s": 2.135363209999994,
+  "observed_realtime_factor": 0.9913041484947379
+}
